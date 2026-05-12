@@ -16,7 +16,14 @@ mochipoyo-ea/
     MochipoyoMTF.mqh           EMA/MACDハンドル管理・値取得
     MochipoyoSignal.mqh        スコアリング・RCI・ダウ理論・グランビル・ダイバージェンス
     MochipoyoRisk.mqh          ロット計算・SL/TP・ポジション管理・ニュース回避
-  backtest-notes.md            バックテスト手順と結果記録
+  backtests/                   バックテスト結果管理
+    001_2026-05-09_baseline/   テスト結果ディレクトリ
+    002_2026-05-10_lot-fix-v1/
+    003_2026-05-12_debug-log/
+    004_2026-05-12_lot-fixed/
+    new-backtest.ps1           テスト実行用PowerShellスクリプト
+    INDEX.md                   全テスト履歴・比較表
+  backtest-notes.md            バックテスト手順と結果記録（参考）
   CLAUDE.md                    本ファイル
 ```
 

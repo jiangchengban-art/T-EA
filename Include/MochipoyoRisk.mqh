@@ -32,11 +32,13 @@ double CalculateLotSize(const string symbol, double riskPercent, double slDistan
    double lossPerLot = (slDistance / tickSize) * tickVal;
    if(lossPerLot<=0) return 0.0;
    double lot = riskCash / lossPerLot;
+   double maxLot = 0.20;
+   lot = MathMin(lot, maxLot);
    double volMin  = SymbolInfoDouble(symbol, SYMBOL_VOLUME_MIN);
    double volMax  = SymbolInfoDouble(symbol, SYMBOL_VOLUME_MAX);
    double volStep = SymbolInfoDouble(symbol, SYMBOL_VOLUME_STEP);
    lot = MathFloor(lot/volStep)*volStep;
-   if(lot < volMin) lot = volMin;
+   if(lot < volMin) return 0.0;
    if(lot > volMax) lot = volMax;
    return NormalizeDouble(lot, 2);
 }
@@ -51,6 +53,10 @@ double GetStopLossPrice(const string symbol, bool isLong, int bufferPips)
    double buf = bufferPips * pip;
    if(StringFind(symbol,"XAU")>=0) buf = 0.5; // GOLD固定0.5
 
+   double minSlDist;
+   if(StringFind(symbol,"XAU")>=0) minSlDist = 5.0;      // GOLD: 最低5.0ドル
+   else minSlDist = 20.0 * PipSize(symbol);               // その他: 最低20pips
+
    double ema40 = GetEMA(symbol, PERIOD_M15, 40, 0);
    if(isLong)
    {
@@ -61,9 +67,13 @@ double GetStopLossPrice(const string symbol, bool isLong, int bufferPips)
       double sl1 = (swingLow>0.0) ? swingLow - buf : 0.0;
       double sl2 = (ema40>0.0) ? ema40 - buf : 0.0;
       // 遠い方（安全）を採用
-      if(sl1==0.0) return sl2;
-      if(sl2==0.0) return sl1;
-      return MathMin(sl1, sl2);
+      if(sl1==0.0 && sl2==0.0) return 0.0;
+      if(sl1==0.0) { double slPrice=sl2; double ask=SymbolInfoDouble(symbol,SYMBOL_ASK); if(ask-slPrice<minSlDist) slPrice=ask-minSlDist; return slPrice; }
+      if(sl2==0.0) { double slPrice=sl1; double ask=SymbolInfoDouble(symbol,SYMBOL_ASK); if(ask-slPrice<minSlDist) slPrice=ask-minSlDist; return slPrice; }
+      double slPrice = MathMin(sl1, sl2);
+      double ask = SymbolInfoDouble(symbol, SYMBOL_ASK);
+      if(ask - slPrice < minSlDist) slPrice = ask - minSlDist;
+      return slPrice;
    }
    else
    {
@@ -73,9 +83,13 @@ double GetStopLossPrice(const string symbol, bool isLong, int bufferPips)
          swingHigh = h1;
       double sl1 = (swingHigh>0.0) ? swingHigh + buf : 0.0;
       double sl2 = (ema40>0.0) ? ema40 + buf : 0.0;
-      if(sl1==0.0) return sl2;
-      if(sl2==0.0) return sl1;
-      return MathMax(sl1, sl2);
+      if(sl1==0.0 && sl2==0.0) return 0.0;
+      if(sl1==0.0) { double slPrice=sl2; double bid=SymbolInfoDouble(symbol,SYMBOL_BID); if(slPrice-bid<minSlDist) slPrice=bid+minSlDist; return slPrice; }
+      if(sl2==0.0) { double slPrice=sl1; double bid=SymbolInfoDouble(symbol,SYMBOL_BID); if(slPrice-bid<minSlDist) slPrice=bid+minSlDist; return slPrice; }
+      double slPrice = MathMax(sl1, sl2);
+      double bid = SymbolInfoDouble(symbol, SYMBOL_BID);
+      if(slPrice - bid < minSlDist) slPrice = bid + minSlDist;
+      return slPrice;
    }
 }
 

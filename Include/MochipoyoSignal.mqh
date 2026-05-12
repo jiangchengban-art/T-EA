@@ -263,6 +263,11 @@ int EvaluateEntry(const string symbol, bool isLong, int &score, string &reasons[
    score = 0;
    ArrayResize(reasons, 0);
 
+   // H4逆行ペナルティ: 上位足に逆らうトレードのスコアを下げる
+   bool h4Aligned = isLong ? IsHigherHighHigherLow(symbol, PERIOD_H4, 80)
+                           : IsLowerHighLowerLow  (symbol, PERIOD_H4, 80);
+   if(!h4Aligned) score -= 2;
+
    // 1. 上位足トレンド(2点)
    bool htfOK = isLong ? IsHigherHighHigherLow(symbol, PERIOD_H4, 80)
                        : IsLowerHighLowerLow  (symbol, PERIOD_H4, 80);

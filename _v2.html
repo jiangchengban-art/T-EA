@@ -1,0 +1,876 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>ストラテジーテスターレポート</title>
+    <meta name="generator" content="strategy tester">
+    <style type="text/css">
+    <!--
+    @media screen {
+      td { font: 8pt  Tahoma,Arial; }
+      th { font: 10pt Tahoma,Arial; }
+    }
+    @media print {
+      td { font: 7pt Tahoma,Arial; }
+      th { font: 9pt Tahoma,Arial; }
+    }
+    .msdate { mso-number-format:"General Date"; }
+    .mspt   { mso-number-format:\#\,\#\#0\.00;  }
+    body {margin:1px;}
+    //-->
+    </style>
+  </head>
+<body>
+<div align="center">
+<table cellspacing="1" cellpadding="3" border="0">
+   <tr align="center">
+      <td colspan="13"><div style="font: 14pt Tahoma"><b>ストラテジーテスターレポート</b><br></div></td>
+   </tr>
+   <tr align="center">
+      <td colspan="13"><div style="font: 10pt Tahoma"><b>XMTrading-MT5 2 (Build 5833)</b><br></div></td>
+   </tr>
+   <tr>
+      <td nowrap style="height: 10px"></td>
+    </tr>
+   <tr>
+      <td colspan="13" align="center"><div style="font: 10pt Tahoma"><b>設定</b></div></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">エキスパート:</td>
+      <td nowrap colspan="10" align="left"><b>MochipoyoEA.mq5</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">銘柄:</td>
+      <td nowrap colspan="10" align="left"><b>GOLD</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">期間:</td>
+      <td nowrap colspan="10" align="left"><b>M5 (2024.05.10 - 2025.05.10)</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">パラメータ:</td>
+      <td nowrap colspan="10" align="left"><b>InpRiskPercent=1.0</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>InpMinRR=1.0</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>InpTargetRR=1.2</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>InpMinScore=8</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>InpMagicNumber=20260411</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>InpMaxSpreadPoints=50</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>InpSlippagePoints=20</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>InpNewsAvoidHours=</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>InpEnableTrading=true</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>InpBufferPips=5</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="10" align="left"><b>InpTrailByEMA40=false</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3" >会社:</td>
+      <td nowrap colspan="10" align="left"><b>Tradexfin Limited</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3" >通貨:</td>
+      <td nowrap colspan="10" align="left"><b>USD</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3" >初期証拠金:</td>
+      <td nowrap colspan="10" align="left"><b>10 000.00</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3" >レバレッジ:</td>
+      <td nowrap colspan="10" align="left"><b>1:100</b></td>
+   </tr>
+   <tr>
+      <td nowrap style="height: 10px"></td>
+    </tr>
+   <tr>
+      <td colspan="13" align="center"><div style="font: 10pt Tahoma"><b>結果</b></div></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">ヒストリー品質:</td>
+      <td nowrap><b>100%</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">バー:</td>
+      <td nowrap><b>70708</b></td>
+      <td nowrap colspan="3">ティック:</td>
+      <td nowrap><b>1411975</b></td>
+      <td nowrap colspan="3">銘柄:</td>
+      <td nowrap colspan="2"><b>1</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">総損益:</td>
+      <td nowrap><b>-828.08</b></td>
+      <td nowrap colspan="3">残高絶対ドローダウン:</td>
+      <td nowrap><b>1 286.72</b></td>
+      <td nowrap colspan="3">証拠金絶対ドローダウン:</td>
+      <td nowrap colspan="2"><b>1 316.81</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">総利益:</td>
+      <td nowrap><b>5 713.63</b></td>
+      <td nowrap colspan="3">残高最大ドローダウン:</td>
+      <td nowrap><b>1 718.16 (16.47%)</b></td>
+      <td nowrap colspan="3">証拠金最大ドローダウン:</td>
+      <td nowrap colspan="2"><b>1 798.17 (17.16%)</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">総損失:</td>
+      <td nowrap><b>-6 541.71</b></td>
+      <td nowrap colspan="3">残高相対ドローダウン:</td>
+      <td nowrap><b>16.47% (1 718.16)</b></td>
+      <td nowrap colspan="3">証拠金相対ドローダウン:</td>
+      <td nowrap colspan="2"><b>17.16% (1 798.17)</b></td>
+   </tr>
+   <tr>
+      <td nowrap style="height: 10px"></td>
+    </tr>
+   <tr align="right">
+      <td nowrap colspan="3">プロフィットファクター:</td>
+      <td nowrap><b>0.87</b></td>
+      <td nowrap colspan="3">期待利得:</td>
+      <td nowrap><b>-6.32</b></td>
+      <td nowrap colspan="3">証拠金維持率:</td>
+      <td nowrap colspan="2"><b>135.11%</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">リカバリファクター:</td>
+      <td nowrap><b>-0.46</b></td>
+      <td nowrap colspan="3">シャープレシオ:</td>
+      <td nowrap><b>-1.78</b></td>
+      <td nowrap colspan="3">Z-Score:</td>
+      <td nowrap colspan="2"><b>-0.27 (21.28%)</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">AHPR:</td>
+      <td nowrap><b>0.9994 (-0.06%)</b></td>
+      <td nowrap colspan="3">LR Correlation:</td>
+      <td nowrap><b>-0.71</b></td>
+      <td nowrap colspan="3">OnTester 結果:</td>
+      <td nowrap colspan="2"><b>0</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">GHPR:</td>
+      <td nowrap><b>0.9993 (-0.07%)</b></td>
+      <td nowrap colspan="3">LR Standard Error:</td>
+      <td nowrap><b>275.74</b></td>
+      <td nowrap colspan="3"></td>
+      <td nowrap colspan="2"><b></b></td>
+   </tr>
+   <tr>
+      <td nowrap style="height: 10px"></td>
+    </tr>
+   <tr align="right">
+      <td nowrap colspan="3">取引数:</td>
+      <td nowrap><b>131</b></td>
+      <td nowrap colspan="3">ショート (勝率 %):</td>
+      <td nowrap><b>39 (30.77%)</b></td>
+      <td nowrap colspan="3">ロング (勝率 %):</td>
+      <td nowrap colspan="2"><b>92 (52.17%)</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">約定数:</td>
+      <td nowrap><b>262</b></td>
+      <td nowrap colspan="3">勝ちトレード (勝率 %):</td>
+      <td nowrap><b>60 (45.80%)</b></td>
+      <td nowrap colspan="3">負けトレード (負率 %):</td>
+      <td nowrap colspan="2"><b>71 (54.20%)</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="4"></td>
+      <td nowrap colspan="3">最大 勝ちトレード:</td>
+      <td nowrap><b>119.99</b></td>
+      <td nowrap colspan="3">最大 負けトレード:</td>
+      <td nowrap colspan="2"><b>-162.94</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="4"></td>
+      <td nowrap colspan="3">平均 勝ちトレード:</td>
+      <td nowrap><b>95.23</b></td>
+      <td nowrap colspan="3">平均 負けトレード:</td>
+      <td nowrap colspan="2"><b>-92.14</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="4"></td>
+      <td nowrap colspan="3">最大 連勝数 (金額):</td>
+      <td nowrap><b>7 (613.64)</b></td>
+      <td nowrap colspan="3">最大 連敗数 (金額):</td>
+      <td nowrap colspan="2"><b>7 (-650.96)</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="4"></td>
+      <td nowrap colspan="3">最大 連勝利益額 (数):</td>
+      <td nowrap><b>613.64 (7)</b></td>
+      <td nowrap colspan="3">最大 連敗損失額 (数):</td>
+      <td nowrap colspan="2"><b>-650.96 (7)</b></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="4"></td>
+      <td nowrap colspan="3">平均 連勝利益額 (数):</td>
+      <td nowrap><b>2</b></td>
+      <td nowrap colspan="3">平均 連敗数:</td>
+      <td nowrap colspan="2"><b>2</b></td>
+   </tr>
+   <tr align="right">
+      <td colspan="13" style="height: 10px"></td>
+   </tr>
+   <tr align="center">
+      <th colspan="13"><img src="ReportTester-370081543.png" title="現金残高グラフ" width=820 height=200 border=0 alt="Graph"></th>
+   </tr>
+   <tr align="right">
+      <td colspan="13" style="height: 10px"></td>
+   </tr>
+   <tr align="center">
+      <th colspan="13"><img src="ReportTester-370081543-hst.png" width=860 height=400 border=0 alt="Graph"></th>
+   </tr>
+   <tr align="right">
+      <td colspan="13" style="height: 10px"></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">Correlation (Profits,MFE):</td>
+      <td nowrap><b>0.85</b></td>
+      <td nowrap colspan="3">Correlation (Profits,MAE):</td>
+      <td nowrap><b>0.84</b></td>
+      <td nowrap colspan="3">Correlation (MFE,MAE):</td>
+      <td nowrap colspan="2"><b>0.7143</b></td>
+   </tr>
+   <tr align="center">
+      <th colspan="13"><img src="ReportTester-370081543-mfemae.png" width=860 height=400 border=0 alt="Graph"></th>
+   </tr>
+   <tr align="right">
+      <td colspan="13" style="height: 10px"></td>
+   </tr>
+   <tr align="right">
+      <td nowrap colspan="3">ポジション最短保持時間:</td>
+      <td nowrap><b>0:00:20</b></td>
+      <td nowrap colspan="3">ポジション最長保持時間:</td>
+      <td nowrap><b>157:44:40</b></td>
+      <td nowrap colspan="3">ポジション平均保持時間:</td>
+      <td nowrap colspan="2"><b>8:33:13</b></td>
+   </tr>
+   <tr align="center">
+      <th colspan="13"><img src="ReportTester-370081543-holding.png" width=860 height=200 border=0 alt="Graph"></th>
+   </tr>
+   <tr align="right">
+      <td colspan="13" style="height: 10px"></td>
+   </tr>
+</table>
+<table cellspacing="1" cellpadding="3" border="0">
+   <tr>
+      <td style="width: 90px;height: 10px"></td>
+      <td style="width: 40px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 70px;"></td>
+      <td style="width: 70px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 60px;"></td>
+      <td style="width: 100px;"></td>
+   </tr>
+   <tr align="center">
+      <th colspan="13" style="height: 25px"><div style="font: 10pt Tahoma"><b>注文</b></div></th>
+   </tr>
+   <tr align="center" bgcolor="#E5F0FC">
+      <td nowrap style="height: 30px"><b>約定時刻</b></td>
+      <td nowrap><b>注文</b></td>
+      <td nowrap><b>銘柄</b></td>
+      <td nowrap><b>タイプ</b></td>
+      <td nowrap colspan="2"><b>数量</b></td>
+      <td nowrap><b>価格</b></td>
+      <td nowrap><b>決済逆指値(S/L)</b></td>
+      <td nowrap><b>決済指値(T/P)</b></td>
+      <td nowrap colspan="2"><b>時間</b></td>
+      <td nowrap><b>状況</b></td>
+      <td nowrap><b>コメント</b></td>
+   </tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.13 23:30:00</td><td>2</td><td>GOLD</td><td>buy</td><td colspan="2">0.47 / 0.47</td><td>0.00</td><td>2334.30</td><td>2338.96</td><td colspan="2">2024.05.13 23:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.14 02:50:20</td><td>3</td><td>GOLD</td><td>sell</td><td colspan="2">0.47 / 0.47</td><td>0.00</td><td></td><td></td><td colspan="2">2024.05.14 02:50:20</td><td>filled</td><td>tp 2338.96</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.14 04:00:00</td><td>4</td><td>GOLD</td><td>buy</td><td colspan="2">0.64 / 0.64</td><td>0.00</td><td>2335.04</td><td>2338.47</td><td colspan="2">2024.05.14 04:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.14 04:02:40</td><td>5</td><td>GOLD</td><td>sell</td><td colspan="2">0.64 / 0.64</td><td>0.00</td><td></td><td></td><td colspan="2">2024.05.14 04:02:40</td><td>filled</td><td>tp 2338.47</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.14 22:15:00</td><td>6</td><td>GOLD</td><td>buy</td><td colspan="2">0.09 / 0.09</td><td>0.00</td><td>2346.15</td><td>2370.35</td><td colspan="2">2024.05.14 22:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.15 11:41:40</td><td>7</td><td>GOLD</td><td>sell</td><td colspan="2">0.09 / 0.09</td><td>0.00</td><td></td><td></td><td colspan="2">2024.05.15 11:41:40</td><td>filled</td><td>tp 2370.35</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.15 12:30:00</td><td>8</td><td>GOLD</td><td>buy</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td>2356.72</td><td>2390.86</td><td colspan="2">2024.05.15 12:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.15 16:51:40</td><td>9</td><td>GOLD</td><td>sell</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td></td><td></td><td colspan="2">2024.05.15 16:51:40</td><td>filled</td><td>sl 2356.72</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.15 21:15:00</td><td>10</td><td>GOLD</td><td>buy</td><td colspan="2">0.08 / 0.08</td><td>0.00</td><td>2375.01</td><td>2400.12</td><td colspan="2">2024.05.15 21:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.16 16:19:40</td><td>11</td><td>GOLD</td><td>sell</td><td colspan="2">0.08 / 0.08</td><td>0.00</td><td></td><td></td><td colspan="2">2024.05.16 16:19:40</td><td>filled</td><td>sl 2375.01</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.17 18:45:00</td><td>12</td><td>GOLD</td><td>buy</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td>2386.73</td><td>2426.57</td><td colspan="2">2024.05.17 18:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.20 04:00:40</td><td>13</td><td>GOLD</td><td>sell</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td></td><td></td><td colspan="2">2024.05.20 04:00:40</td><td>filled</td><td>tp 2426.57</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.20 04:45:00</td><td>14</td><td>GOLD</td><td>buy</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td>2416.35</td><td>2448.36</td><td colspan="2">2024.05.20 04:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.20 08:44:40</td><td>15</td><td>GOLD</td><td>sell</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td></td><td></td><td colspan="2">2024.05.20 08:44:40</td><td>filled</td><td>tp 2448.36</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.20 08:45:00</td><td>16</td><td>GOLD</td><td>buy</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td>2428.45</td><td>2473.84</td><td colspan="2">2024.05.20 08:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.20 14:40:40</td><td>17</td><td>GOLD</td><td>sell</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td></td><td></td><td colspan="2">2024.05.20 14:40:40</td><td>filled</td><td>sl 2428.45</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.22 19:00:00</td><td>18</td><td>GOLD</td><td>sell</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td>2415.00</td><td>2364.14</td><td colspan="2">2024.05.22 19:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.23 08:50:40</td><td>19</td><td>GOLD</td><td>buy</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td></td><td></td><td colspan="2">2024.05.23 08:50:40</td><td>filled</td><td>tp 2364.14</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.23 09:45:00</td><td>20</td><td>GOLD</td><td>sell</td><td colspan="2">0.1 / 0.1</td><td>0.00</td><td>2374.12</td><td>2352.15</td><td colspan="2">2024.05.23 09:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.23 16:50:40</td><td>21</td><td>GOLD</td><td>buy</td><td colspan="2">0.1 / 0.1</td><td>0.00</td><td></td><td></td><td colspan="2">2024.05.23 16:50:40</td><td>filled</td><td>tp 2352.15</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.23 19:00:00</td><td>22</td><td>GOLD</td><td>sell</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td>2369.85</td><td>2317.34</td><td colspan="2">2024.05.23 19:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.03 08:44:40</td><td>23</td><td>GOLD</td><td>buy</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.03 08:44:40</td><td>filled</td><td>tp 2317.34</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.10 06:00:00</td><td>24</td><td>GOLD</td><td>buy</td><td colspan="2">0.39 / 0.39</td><td>0.00</td><td>2293.80</td><td>2299.56</td><td colspan="2">2024.06.10 06:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.10 07:02:40</td><td>25</td><td>GOLD</td><td>sell</td><td colspan="2">0.39 / 0.39</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.10 07:02:40</td><td>filled</td><td>sl 2293.80</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.11 09:15:00</td><td>26</td><td>GOLD</td><td>sell</td><td colspan="2">0.3 / 0.3</td><td>0.00</td><td>2304.37</td><td>2296.82</td><td colspan="2">2024.06.11 09:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.11 09:36:40</td><td>27</td><td>GOLD</td><td>buy</td><td colspan="2">0.3 / 0.3</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.11 09:36:40</td><td>filled</td><td>sl 2304.37</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.11 09:45:00</td><td>28</td><td>GOLD</td><td>sell</td><td colspan="2">0.61 / 0.61</td><td>0.00</td><td>2304.31</td><td>2300.66</td><td colspan="2">2024.06.11 09:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.11 10:04:40</td><td>29</td><td>GOLD</td><td>buy</td><td colspan="2">0.61 / 0.61</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.11 10:04:40</td><td>filled</td><td>sl 2304.31</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.12 17:00:00</td><td>30</td><td>GOLD</td><td>buy</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td>2311.44</td><td>2352.29</td><td colspan="2">2024.06.12 17:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.13 04:25:40</td><td>31</td><td>GOLD</td><td>sell</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.13 04:25:40</td><td>filled</td><td>sl 2311.44</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.14 19:30:00</td><td>32</td><td>GOLD</td><td>sell</td><td colspan="2">0.15 / 0.15</td><td>0.00</td><td>2335.39</td><td>2321.62</td><td colspan="2">2024.06.14 19:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.14 20:36:20</td><td>33</td><td>GOLD</td><td>buy</td><td colspan="2">0.15 / 0.15</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.14 20:36:20</td><td>filled</td><td>sl 2335.39</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.18 21:00:00</td><td>34</td><td>GOLD</td><td>buy</td><td colspan="2">0.13 / 0.13</td><td>0.00</td><td>2322.87</td><td>2338.45</td><td colspan="2">2024.06.18 21:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.20 04:41:40</td><td>35</td><td>GOLD</td><td>sell</td><td colspan="2">0.13 / 0.13</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.20 04:41:40</td><td>filled</td><td>tp 2338.45</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.21 09:30:00</td><td>36</td><td>GOLD</td><td>buy</td><td colspan="2">0.26 / 0.26</td><td>0.00</td><td>2358.01</td><td>2366.11</td><td colspan="2">2024.06.21 09:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.21 09:47:40</td><td>37</td><td>GOLD</td><td>sell</td><td colspan="2">0.26 / 0.26</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.21 09:47:40</td><td>filled</td><td>sl 2358.01</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.24 05:30:00</td><td>38</td><td>GOLD</td><td>buy</td><td colspan="2">0.23 / 0.23</td><td>0.00</td><td>2317.54</td><td>2326.74</td><td colspan="2">2024.06.24 05:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.24 08:30:40</td><td>39</td><td>GOLD</td><td>sell</td><td colspan="2">0.23 / 0.23</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.24 08:30:40</td><td>filled</td><td>tp 2326.74</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.25 19:00:00</td><td>40</td><td>GOLD</td><td>sell</td><td colspan="2">0.28 / 0.28</td><td>0.00</td><td>2328.16</td><td>2320.50</td><td colspan="2">2024.06.25 19:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.25 19:24:40</td><td>41</td><td>GOLD</td><td>buy</td><td colspan="2">0.28 / 0.28</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.25 19:24:40</td><td>filled</td><td>tp 2320.50</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.25 20:30:00</td><td>42</td><td>GOLD</td><td>sell</td><td colspan="2">0.17 / 0.17</td><td>0.00</td><td>2324.95</td><td>2312.04</td><td colspan="2">2024.06.25 20:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.26 04:41:40</td><td>43</td><td>GOLD</td><td>buy</td><td colspan="2">0.17 / 0.17</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.26 04:41:40</td><td>filled</td><td>tp 2312.04</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.27 21:15:00</td><td>44</td><td>GOLD</td><td>buy</td><td colspan="2">0.25 / 0.25</td><td>0.00</td><td>2320.06</td><td>2328.73</td><td colspan="2">2024.06.27 21:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.28 04:07:40</td><td>45</td><td>GOLD</td><td>sell</td><td colspan="2">0.25 / 0.25</td><td>0.00</td><td></td><td></td><td colspan="2">2024.06.28 04:07:40</td><td>filled</td><td>sl 2320.06</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.01 15:30:00</td><td>46</td><td>GOLD</td><td>buy</td><td colspan="2">0.07 / 0.07</td><td>0.00</td><td>2321.74</td><td>2350.27</td><td colspan="2">2024.07.01 15:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.01 17:22:40</td><td>47</td><td>GOLD</td><td>sell</td><td colspan="2">0.07 / 0.07</td><td>0.00</td><td></td><td></td><td colspan="2">2024.07.01 17:22:40</td><td>filled</td><td>sl 2321.74</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.02 15:30:00</td><td>48</td><td>GOLD</td><td>sell</td><td colspan="2">0.22 / 0.22</td><td>0.00</td><td>2326.53</td><td>2316.74</td><td colspan="2">2024.07.02 15:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.02 15:46:40</td><td>49</td><td>GOLD</td><td>buy</td><td colspan="2">0.22 / 0.22</td><td>0.00</td><td></td><td></td><td colspan="2">2024.07.02 15:46:40</td><td>filled</td><td>sl 2326.53</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.05 08:30:00</td><td>50</td><td>GOLD</td><td>buy</td><td colspan="2">0.27 / 0.27</td><td>0.00</td><td>2359.39</td><td>2367.27</td><td colspan="2">2024.07.05 08:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.05 10:43:40</td><td>51</td><td>GOLD</td><td>sell</td><td colspan="2">0.27 / 0.27</td><td>0.00</td><td></td><td></td><td colspan="2">2024.07.05 10:43:40</td><td>filled</td><td>tp 2367.27</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.05 12:30:00</td><td>52</td><td>GOLD</td><td>buy</td><td colspan="2">0.29 / 0.29</td><td>0.00</td><td>2362.08</td><td>2369.36</td><td colspan="2">2024.07.05 12:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.05 12:59:20</td><td>53</td><td>GOLD</td><td>sell</td><td colspan="2">0.29 / 0.29</td><td>0.00</td><td></td><td></td><td colspan="2">2024.07.05 12:59:20</td><td>filled</td><td>sl 2362.08</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.05 22:45:00</td><td>54</td><td>GOLD</td><td>buy</td><td colspan="2">0.1 / 0.1</td><td>0.00</td><td>2381.37</td><td>2401.89</td><td colspan="2">2024.07.05 22:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.08 05:52:40</td><td>55</td><td>GOLD</td><td>sell</td><td colspan="2">0.1 / 0.1</td><td>0.00</td><td></td><td></td><td colspan="2">2024.07.08 05:52:40</td><td>filled</td><td>sl 2381.37</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.10 16:15:00</td><td>56</td><td>GOLD</td><td>buy</td><td colspan="2">0.12 / 0.12</td><td>0.00</td><td>2371.59</td><td>2388.33</td><td colspan="2">2024.07.10 16:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.10 20:24:40</td><td>57</td><td>GOLD</td><td>sell</td><td colspan="2">0.12 / 0.12</td><td>0.00</td><td></td><td></td><td colspan="2">2024.07.10 20:24:40</td><td>filled</td><td>sl 2371.59</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.16 09:15:00</td><td>58</td><td>GOLD</td><td>buy</td><td colspan="2">0.19 / 0.19</td><td>0.00</td><td>2424.90</td><td>2435.92</td><td colspan="2">2024.07.16 09:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.16 10:17:40</td><td>59</td><td>GOLD</td><td>sell</td><td colspan="2">0.19 / 0.19</td><td>0.00</td><td></td><td></td><td colspan="2">2024.07.16 10:17:40</td><td>filled</td><td>tp 2435.92</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.16 13:30:00</td><td>60</td><td>GOLD</td><td>buy</td><td colspan="2">0.13 / 0.13</td><td>0.00</td><td>2433.02</td><td>2449.44</td><td colspan="2">2024.07.16 13:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.16 15:37:40</td><td>61</td><td>GOLD</td><td>sell</td><td colspan="2">0.13 / 0.13</td><td>0.00</td><td></td><td></td><td colspan="2">2024.07.16 15:37:40</td><td>filled</td><td>sl 2433.02</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.17 02:45:00</td><td>62</td><td>GOLD</td><td>buy</td><td colspan="2">0.12 / 0.12</td><td>0.00</td><td>2460.56</td><td>2477.76</td><td colspan="2">2024.07.17 02:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.17 04:41:40</td><td>63</td><td>GOLD</td><td>sell</td><td colspan="2">0.12 / 0.12</td><td>0.00</td><td></td><td></td><td colspan="2">2024.07.17 04:41:40</td><td>filled</td><td>tp 2477.76</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.02 14:45:00</td><td>64</td><td>GOLD</td><td>buy</td><td colspan="2">1.26 / 1.26</td><td>0.00</td><td>2459.06</td><td>2460.75</td><td colspan="2">2024.08.02 14:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.02 14:45:40</td><td>65</td><td>GOLD</td><td>sell</td><td colspan="2">1.26 / 1.26</td><td>0.00</td><td></td><td></td><td colspan="2">2024.08.02 14:45:40</td><td>filled</td><td>sl 2459.06</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.02 22:00:00</td><td>66</td><td>GOLD</td><td>buy</td><td colspan="2">0.15 / 0.15</td><td>0.00</td><td>2422.76</td><td>2436.86</td><td colspan="2">2024.08.02 22:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.02 22:51:20</td><td>67</td><td>GOLD</td><td>sell</td><td colspan="2">0.15 / 0.15</td><td>0.00</td><td></td><td></td><td colspan="2">2024.08.02 22:51:20</td><td>filled</td><td>tp 2436.86</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.07 16:30:00</td><td>68</td><td>GOLD</td><td>buy</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td>2394.13</td><td>2409.07</td><td colspan="2">2024.08.07 16:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.07 18:31:40</td><td>69</td><td>GOLD</td><td>sell</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td></td><td></td><td colspan="2">2024.08.07 18:31:40</td><td>filled</td><td>sl 2394.13</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.19 08:15:00</td><td>70</td><td>GOLD</td><td>sell</td><td colspan="2">0.2 / 0.2</td><td>0.00</td><td>2504.63</td><td>2494.20</td><td colspan="2">2024.08.19 08:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.19 09:10:40</td><td>71</td><td>GOLD</td><td>buy</td><td colspan="2">0.2 / 0.2</td><td>0.00</td><td></td><td></td><td colspan="2">2024.08.19 09:10:40</td><td>filled</td><td>sl 2504.63</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.19 09:45:00</td><td>72</td><td>GOLD</td><td>sell</td><td colspan="2">2.8 / 2.8</td><td>0.00</td><td>2504.63</td><td>2503.88</td><td colspan="2">2024.08.19 09:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.19 09:45:20</td><td>73</td><td>GOLD</td><td>buy</td><td colspan="2">2.8 / 2.8</td><td>0.00</td><td></td><td></td><td colspan="2">2024.08.19 09:45:20</td><td>filled</td><td>sl 2504.63</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.03 05:00:00</td><td>74</td><td>GOLD</td><td>sell</td><td colspan="2">0.19 / 0.19</td><td>0.00</td><td>2498.43</td><td>2487.80</td><td colspan="2">2024.09.03 05:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.03 09:56:40</td><td>75</td><td>GOLD</td><td>buy</td><td colspan="2">0.19 / 0.19</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.03 09:56:40</td><td>filled</td><td>sl 2498.43</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.03 18:45:00</td><td>76</td><td>GOLD</td><td>sell</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td>2502.01</td><td>2462.81</td><td colspan="2">2024.09.03 18:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.05 08:51:40</td><td>77</td><td>GOLD</td><td>buy</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.05 08:51:40</td><td>filled</td><td>sl 2502.01</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.10 16:45:00</td><td>78</td><td>GOLD</td><td>buy</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td>2504.08</td><td>2518.09</td><td colspan="2">2024.09.10 16:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.10 17:14:40</td><td>79</td><td>GOLD</td><td>sell</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.10 17:14:40</td><td>filled</td><td>sl 2504.08</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.10 21:15:00</td><td>80</td><td>GOLD</td><td>buy</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td>2500.73</td><td>2529.95</td><td colspan="2">2024.09.10 21:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.12 15:41:40</td><td>81</td><td>GOLD</td><td>sell</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.12 15:41:40</td><td>filled</td><td>tp 2529.95</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.18 23:30:00</td><td>82</td><td>GOLD</td><td>sell</td><td colspan="2">0.02 / 0.02</td><td>0.00</td><td>2600.06</td><td>2510.48</td><td colspan="2">2024.09.18 23:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.20 09:34:40</td><td>83</td><td>GOLD</td><td>buy</td><td colspan="2">0.02 / 0.02</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.20 09:34:40</td><td>filled</td><td>sl 2600.06</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.26 11:30:00</td><td>84</td><td>GOLD</td><td>buy</td><td colspan="2">0.09 / 0.09</td><td>0.00</td><td>2659.33</td><td>2680.91</td><td colspan="2">2024.09.26 11:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.26 14:37:40</td><td>85</td><td>GOLD</td><td>sell</td><td colspan="2">0.09 / 0.09</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.26 14:37:40</td><td>filled</td><td>tp 2680.91</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.26 15:30:00</td><td>86</td><td>GOLD</td><td>buy</td><td colspan="2">0.07 / 0.07</td><td>0.00</td><td>2666.74</td><td>2692.59</td><td colspan="2">2024.09.26 15:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.26 16:11:40</td><td>87</td><td>GOLD</td><td>sell</td><td colspan="2">0.07 / 0.07</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.26 16:11:40</td><td>filled</td><td>sl 2666.74</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.26 22:45:00</td><td>88</td><td>GOLD</td><td>buy</td><td colspan="2">0.08 / 0.08</td><td>0.00</td><td>2662.76</td><td>2687.88</td><td colspan="2">2024.09.26 22:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.27 08:35:40</td><td>89</td><td>GOLD</td><td>sell</td><td colspan="2">0.08 / 0.08</td><td>0.00</td><td></td><td></td><td colspan="2">2024.09.27 08:35:40</td><td>filled</td><td>sl 2662.76</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.30 14:45:00</td><td>90</td><td>GOLD</td><td>sell</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td>2656.57</td><td>2623.02</td><td colspan="2">2024.09.30 14:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.01 15:25:40</td><td>91</td><td>GOLD</td><td>buy</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.01 15:25:40</td><td>filled</td><td>sl 2656.57</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.02 08:30:00</td><td>92</td><td>GOLD</td><td>sell</td><td colspan="2">0.07 / 0.07</td><td>0.00</td><td>2661.48</td><td>2633.87</td><td colspan="2">2024.10.02 08:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.02 17:04:40</td><td>93</td><td>GOLD</td><td>buy</td><td colspan="2">0.07 / 0.07</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.02 17:04:40</td><td>filled</td><td>sl 2661.48</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.04 16:45:00</td><td>94</td><td>GOLD</td><td>sell</td><td colspan="2">0.08 / 0.08</td><td>0.00</td><td>2662.50</td><td>2638.61</td><td colspan="2">2024.10.04 16:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.04 18:03:40</td><td>95</td><td>GOLD</td><td>buy</td><td colspan="2">0.08 / 0.08</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.04 18:03:40</td><td>filled</td><td>sl 2662.50</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.09 22:15:00</td><td>96</td><td>GOLD</td><td>sell</td><td colspan="2">0.28 / 0.28</td><td>0.00</td><td>2611.91</td><td>2605.15</td><td colspan="2">2024.10.09 22:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.10 04:44:20</td><td>97</td><td>GOLD</td><td>buy</td><td colspan="2">0.28 / 0.28</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.10 04:44:20</td><td>filled</td><td>sl 2611.91</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.15 20:00:00</td><td>98</td><td>GOLD</td><td>buy</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td>2645.87</td><td>2681.42</td><td colspan="2">2024.10.15 20:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.16 12:04:40</td><td>99</td><td>GOLD</td><td>sell</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.16 12:04:40</td><td>filled</td><td>tp 2681.42</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.16 13:30:00</td><td>100</td><td>GOLD</td><td>buy</td><td colspan="2">0.24 / 0.24</td><td>0.00</td><td>2672.22</td><td>2680.16</td><td colspan="2">2024.10.16 13:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.16 14:56:40</td><td>101</td><td>GOLD</td><td>sell</td><td colspan="2">0.24 / 0.24</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.16 14:56:40</td><td>filled</td><td>tp 2680.16</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.17 05:45:00</td><td>102</td><td>GOLD</td><td>buy</td><td colspan="2">0.1 / 0.1</td><td>0.00</td><td>2672.96</td><td>2691.29</td><td colspan="2">2024.10.17 05:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.17 17:26:40</td><td>103</td><td>GOLD</td><td>sell</td><td colspan="2">0.1 / 0.1</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.17 17:26:40</td><td>filled</td><td>tp 2691.29</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.17 23:45:00</td><td>104</td><td>GOLD</td><td>buy</td><td colspan="2">0.3 / 0.3</td><td>0.00</td><td>2688.70</td><td>2695.19</td><td colspan="2">2024.10.17 23:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.18 03:32:40</td><td>105</td><td>GOLD</td><td>sell</td><td colspan="2">0.3 / 0.3</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.18 03:32:40</td><td>filled</td><td>tp 2695.19</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.18 03:45:00</td><td>106</td><td>GOLD</td><td>buy</td><td colspan="2">0.23 / 0.23</td><td>0.00</td><td>2690.78</td><td>2699.18</td><td colspan="2">2024.10.18 03:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.18 04:24:40</td><td>107</td><td>GOLD</td><td>sell</td><td colspan="2">0.23 / 0.23</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.18 04:24:40</td><td>filled</td><td>tp 2699.18</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.18 04:30:00</td><td>108</td><td>GOLD</td><td>buy</td><td colspan="2">0.11 / 0.11</td><td>0.00</td><td>2692.09</td><td>2709.28</td><td colspan="2">2024.10.18 04:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.18 05:25:40</td><td>109</td><td>GOLD</td><td>sell</td><td colspan="2">0.11 / 0.11</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.18 05:25:40</td><td>filled</td><td>tp 2709.28</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.18 07:30:00</td><td>110</td><td>GOLD</td><td>buy</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td>2692.63</td><td>2729.72</td><td colspan="2">2024.10.18 07:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.21 05:29:20</td><td>111</td><td>GOLD</td><td>sell</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.21 05:29:20</td><td>filled</td><td>tp 2729.72</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.21 07:15:00</td><td>112</td><td>GOLD</td><td>buy</td><td colspan="2">0.13 / 0.13</td><td>0.00</td><td>2724.25</td><td>2739.23</td><td colspan="2">2024.10.21 07:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.21 09:00:40</td><td>113</td><td>GOLD</td><td>sell</td><td colspan="2">0.13 / 0.13</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.21 09:00:40</td><td>filled</td><td>sl 2724.25</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.21 12:00:00</td><td>114</td><td>GOLD</td><td>buy</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td>2725.21</td><td>2739.18</td><td colspan="2">2024.10.21 12:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.21 15:36:40</td><td>115</td><td>GOLD</td><td>sell</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.21 15:36:40</td><td>filled</td><td>tp 2739.18</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.21 20:45:00</td><td>116</td><td>GOLD</td><td>buy</td><td colspan="2">0.21 / 0.21</td><td>0.00</td><td>2717.94</td><td>2727.44</td><td colspan="2">2024.10.21 20:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.21 21:54:40</td><td>117</td><td>GOLD</td><td>sell</td><td colspan="2">0.21 / 0.21</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.21 21:54:40</td><td>filled</td><td>sl 2717.94</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.22 07:00:00</td><td>118</td><td>GOLD</td><td>buy</td><td colspan="2">0.08 / 0.08</td><td>0.00</td><td>2720.51</td><td>2744.05</td><td colspan="2">2024.10.22 07:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.22 18:15:40</td><td>119</td><td>GOLD</td><td>sell</td><td colspan="2">0.08 / 0.08</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.22 18:15:40</td><td>filled</td><td>tp 2744.05</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.22 18:45:00</td><td>120</td><td>GOLD</td><td>buy</td><td colspan="2">0.17 / 0.17</td><td>0.00</td><td>2733.62</td><td>2745.70</td><td colspan="2">2024.10.22 18:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.22 20:00:40</td><td>121</td><td>GOLD</td><td>sell</td><td colspan="2">0.17 / 0.17</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.22 20:00:40</td><td>filled</td><td>tp 2745.70</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.22 21:15:00</td><td>122</td><td>GOLD</td><td>buy</td><td colspan="2">0.1 / 0.1</td><td>0.00</td><td>2736.67</td><td>2756.71</td><td colspan="2">2024.10.22 21:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.23 11:29:40</td><td>123</td><td>GOLD</td><td>sell</td><td colspan="2">0.1 / 0.1</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.23 11:29:40</td><td>filled</td><td>tp 2756.71</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.25 07:15:00</td><td>124</td><td>GOLD</td><td>sell</td><td colspan="2">0.1 / 0.1</td><td>0.00</td><td>2735.08</td><td>2715.24</td><td colspan="2">2024.10.25 07:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.25 17:10:40</td><td>125</td><td>GOLD</td><td>buy</td><td colspan="2">0.1 / 0.1</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.25 17:10:40</td><td>filled</td><td>sl 2735.08</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.28 20:15:00</td><td>126</td><td>GOLD</td><td>buy</td><td colspan="2">0.35 / 0.35</td><td>0.00</td><td>2739.44</td><td>2745.29</td><td colspan="2">2024.10.28 20:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.29 02:31:40</td><td>127</td><td>GOLD</td><td>sell</td><td colspan="2">0.35 / 0.35</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.29 02:31:40</td><td>filled</td><td>tp 2745.29</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.29 09:30:00</td><td>128</td><td>GOLD</td><td>buy</td><td colspan="2">0.18 / 0.18</td><td>0.00</td><td>2748.77</td><td>2759.90</td><td colspan="2">2024.10.29 09:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.29 10:22:40</td><td>129</td><td>GOLD</td><td>sell</td><td colspan="2">0.18 / 0.18</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.29 10:22:40</td><td>filled</td><td>sl 2748.77</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.29 10:30:00</td><td>130</td><td>GOLD</td><td>buy</td><td colspan="2">0.62 / 0.62</td><td>0.00</td><td>2748.77</td><td>2752.07</td><td colspan="2">2024.10.29 10:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.29 10:35:40</td><td>131</td><td>GOLD</td><td>sell</td><td colspan="2">0.62 / 0.62</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.29 10:35:40</td><td>filled</td><td>tp 2752.07</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.30 01:15:00</td><td>132</td><td>GOLD</td><td>buy</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td>2768.06</td><td>2782.20</td><td colspan="2">2024.10.30 01:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.30 07:33:40</td><td>133</td><td>GOLD</td><td>sell</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.30 07:33:40</td><td>filled</td><td>tp 2782.20</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.30 09:30:00</td><td>134</td><td>GOLD</td><td>buy</td><td colspan="2">0.11 / 0.11</td><td>0.00</td><td>2775.88</td><td>2794.73</td><td colspan="2">2024.10.30 09:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.30 14:15:40</td><td>135</td><td>GOLD</td><td>sell</td><td colspan="2">0.11 / 0.11</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.30 14:15:40</td><td>filled</td><td>sl 2775.88</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.30 19:30:00</td><td>136</td><td>GOLD</td><td>buy</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td>2771.79</td><td>2810.07</td><td colspan="2">2024.10.30 19:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.31 15:00:40</td><td>137</td><td>GOLD</td><td>sell</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td></td><td></td><td colspan="2">2024.10.31 15:00:40</td><td>filled</td><td>sl 2771.79</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.31 22:00:00</td><td>138</td><td>GOLD</td><td>buy</td><td colspan="2">0.1 / 0.1</td><td>0.00</td><td>2738.09</td><td>2757.05</td><td colspan="2">2024.10.31 22:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.01 08:09:20</td><td>139</td><td>GOLD</td><td>sell</td><td colspan="2">0.1 / 0.1</td><td>0.00</td><td></td><td></td><td colspan="2">2024.11.01 08:09:20</td><td>filled</td><td>tp 2757.05</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.05 05:15:00</td><td>140</td><td>GOLD</td><td>sell</td><td colspan="2">0.13 / 0.13</td><td>0.00</td><td>2736.04</td><td>2720.90</td><td colspan="2">2024.11.05 05:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.05 05:56:40</td><td>141</td><td>GOLD</td><td>buy</td><td colspan="2">0.13 / 0.13</td><td>0.00</td><td></td><td></td><td colspan="2">2024.11.05 05:56:40</td><td>filled</td><td>sl 2736.04</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.13 01:15:00</td><td>142</td><td>GOLD</td><td>sell</td><td colspan="2">0.37 / 0.37</td><td>0.00</td><td>2601.25</td><td>2595.77</td><td colspan="2">2024.11.13 01:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.13 03:00:40</td><td>143</td><td>GOLD</td><td>buy</td><td colspan="2">0.37 / 0.37</td><td>0.00</td><td></td><td></td><td colspan="2">2024.11.13 03:00:40</td><td>filled</td><td>sl 2601.25</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.13 20:15:00</td><td>144</td><td>GOLD</td><td>sell</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td>2606.72</td><td>2557.59</td><td colspan="2">2024.11.13 20:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.14 07:37:40</td><td>145</td><td>GOLD</td><td>buy</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td></td><td></td><td colspan="2">2024.11.14 07:37:40</td><td>filled</td><td>tp 2557.59</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.14 12:15:00</td><td>146</td><td>GOLD</td><td>sell</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td>2559.76</td><td>2526.19</td><td colspan="2">2024.11.14 12:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.14 15:42:40</td><td>147</td><td>GOLD</td><td>buy</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td></td><td></td><td colspan="2">2024.11.14 15:42:40</td><td>filled</td><td>sl 2559.76</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.27 23:30:00</td><td>148</td><td>GOLD</td><td>sell</td><td colspan="2">0.16 / 0.16</td><td>0.00</td><td>2640.31</td><td>2628.06</td><td colspan="2">2024.11.27 23:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.28 03:07:40</td><td>149</td><td>GOLD</td><td>buy</td><td colspan="2">0.16 / 0.16</td><td>0.00</td><td></td><td></td><td colspan="2">2024.11.28 03:07:40</td><td>filled</td><td>tp 2628.06</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.28 12:30:00</td><td>150</td><td>GOLD</td><td>buy</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td>2629.95</td><td>2664.14</td><td colspan="2">2024.11.28 12:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.29 06:41:20</td><td>151</td><td>GOLD</td><td>sell</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td></td><td></td><td colspan="2">2024.11.29 06:41:20</td><td>filled</td><td>tp 2664.14</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.02 07:15:00</td><td>152</td><td>GOLD</td><td>buy</td><td colspan="2">0.52 / 0.52</td><td>0.00</td><td>2623.91</td><td>2627.91</td><td colspan="2">2024.12.02 07:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.02 07:17:40</td><td>153</td><td>GOLD</td><td>sell</td><td colspan="2">0.52 / 0.52</td><td>0.00</td><td></td><td></td><td colspan="2">2024.12.02 07:17:40</td><td>filled</td><td>sl 2623.91</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.06 11:45:00</td><td>154</td><td>GOLD</td><td>buy</td><td colspan="2">0.13 / 0.13</td><td>0.00</td><td>2635.85</td><td>2650.81</td><td colspan="2">2024.12.06 11:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.06 12:39:40</td><td>155</td><td>GOLD</td><td>sell</td><td colspan="2">0.13 / 0.13</td><td>0.00</td><td></td><td></td><td colspan="2">2024.12.06 12:39:40</td><td>filled</td><td>sl 2635.85</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.11 20:45:00</td><td>156</td><td>GOLD</td><td>buy</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td>2696.34</td><td>2741.13</td><td colspan="2">2024.12.11 20:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.12 16:01:40</td><td>157</td><td>GOLD</td><td>sell</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td></td><td></td><td colspan="2">2024.12.12 16:01:40</td><td>filled</td><td>sl 2696.34</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.18 17:30:00</td><td>158</td><td>GOLD</td><td>sell</td><td colspan="2">0.07 / 0.07</td><td>0.00</td><td>2649.41</td><td>2620.59</td><td colspan="2">2024.12.18 17:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.18 21:07:40</td><td>159</td><td>GOLD</td><td>buy</td><td colspan="2">0.07 / 0.07</td><td>0.00</td><td></td><td></td><td colspan="2">2024.12.18 21:07:40</td><td>filled</td><td>tp 2620.59</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.19 07:30:00</td><td>160</td><td>GOLD</td><td>sell</td><td colspan="2">0.22 / 0.22</td><td>0.00</td><td>2613.86</td><td>2604.60</td><td colspan="2">2024.12.19 07:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.19 08:04:40</td><td>161</td><td>GOLD</td><td>buy</td><td colspan="2">0.22 / 0.22</td><td>0.00</td><td></td><td></td><td colspan="2">2024.12.19 08:04:40</td><td>filled</td><td>tp 2604.60</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.19 20:15:00</td><td>162</td><td>GOLD</td><td>sell</td><td colspan="2">0.17 / 0.17</td><td>0.00</td><td>2600.58</td><td>2588.87</td><td colspan="2">2024.12.19 20:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.19 21:00:40</td><td>163</td><td>GOLD</td><td>buy</td><td colspan="2">0.17 / 0.17</td><td>0.00</td><td></td><td></td><td colspan="2">2024.12.19 21:00:40</td><td>filled</td><td>sl 2600.58</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.20 01:30:00</td><td>164</td><td>GOLD</td><td>sell</td><td colspan="2">0.16 / 0.16</td><td>0.00</td><td>2600.24</td><td>2587.48</td><td colspan="2">2024.12.20 01:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.20 03:33:40</td><td>165</td><td>GOLD</td><td>buy</td><td colspan="2">0.16 / 0.16</td><td>0.00</td><td></td><td></td><td colspan="2">2024.12.20 03:33:40</td><td>filled</td><td>sl 2600.24</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.23 08:15:00</td><td>166</td><td>GOLD</td><td>buy</td><td colspan="2">0.17 / 0.17</td><td>0.00</td><td>2622.11</td><td>2633.51</td><td colspan="2">2024.12.23 08:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.23 12:31:40</td><td>167</td><td>GOLD</td><td>sell</td><td colspan="2">0.17 / 0.17</td><td>0.00</td><td></td><td></td><td colspan="2">2024.12.23 12:31:40</td><td>filled</td><td>sl 2622.11</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.27 18:30:00</td><td>168</td><td>GOLD</td><td>buy</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td>2612.79</td><td>2627.02</td><td colspan="2">2024.12.27 18:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.27 22:31:40</td><td>169</td><td>GOLD</td><td>sell</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td></td><td></td><td colspan="2">2024.12.27 22:31:40</td><td>filled</td><td>sl 2612.79</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.08 18:15:00</td><td>170</td><td>GOLD</td><td>buy</td><td colspan="2">0.11 / 0.11</td><td>0.00</td><td>2656.71</td><td>2674.69</td><td colspan="2">2025.01.08 18:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.08 19:36:40</td><td>171</td><td>GOLD</td><td>sell</td><td colspan="2">0.11 / 0.11</td><td>0.00</td><td></td><td></td><td colspan="2">2025.01.08 19:36:40</td><td>filled</td><td>sl 2656.71</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.08 23:45:00</td><td>172</td><td>GOLD</td><td>buy</td><td colspan="2">0.07 / 0.07</td><td>0.00</td><td>2651.40</td><td>2676.30</td><td colspan="2">2025.01.08 23:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.09 15:27:40</td><td>173</td><td>GOLD</td><td>sell</td><td colspan="2">0.07 / 0.07</td><td>0.00</td><td></td><td></td><td colspan="2">2025.01.09 15:27:40</td><td>filled</td><td>tp 2676.30</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.10 12:45:00</td><td>174</td><td>GOLD</td><td>buy</td><td colspan="2">0.24 / 0.24</td><td>0.00</td><td>2675.91</td><td>2684.05</td><td colspan="2">2025.01.10 12:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.10 14:39:40</td><td>175</td><td>GOLD</td><td>sell</td><td colspan="2">0.24 / 0.24</td><td>0.00</td><td></td><td></td><td colspan="2">2025.01.10 14:39:40</td><td>filled</td><td>sl 2675.91</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.10 18:15:00</td><td>176</td><td>GOLD</td><td>buy</td><td colspan="2">0.03 / 0.03</td><td>0.00</td><td>2663.58</td><td>2724.94</td><td colspan="2">2025.01.10 18:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.13 17:55:40</td><td>177</td><td>GOLD</td><td>sell</td><td colspan="2">0.03 / 0.03</td><td>0.00</td><td></td><td></td><td colspan="2">2025.01.13 17:55:40</td><td>filled</td><td>sl 2663.58</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.24 03:45:00</td><td>178</td><td>GOLD</td><td>buy</td><td colspan="2">0.2 / 0.2</td><td>0.00</td><td>2754.69</td><td>2764.04</td><td colspan="2">2025.01.24 03:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.24 04:00:40</td><td>179</td><td>GOLD</td><td>sell</td><td colspan="2">0.2 / 0.2</td><td>0.00</td><td></td><td></td><td colspan="2">2025.01.24 04:00:40</td><td>filled</td><td>tp 2764.04</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.24 08:45:00</td><td>180</td><td>GOLD</td><td>buy</td><td colspan="2">0.1 / 0.1</td><td>0.00</td><td>2766.85</td><td>2786.29</td><td colspan="2">2025.01.24 08:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.27 01:02:40</td><td>181</td><td>GOLD</td><td>sell</td><td colspan="2">0.1 / 0.1</td><td>0.00</td><td></td><td></td><td colspan="2">2025.01.27 01:02:40</td><td>filled</td><td>sl 2766.85</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.03 12:00:00</td><td>182</td><td>GOLD</td><td>buy</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td>2790.63</td><td>2803.65</td><td colspan="2">2025.02.03 12:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.03 13:12:40</td><td>183</td><td>GOLD</td><td>sell</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.03 13:12:40</td><td>filled</td><td>tp 2803.65</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.03 13:45:00</td><td>184</td><td>GOLD</td><td>buy</td><td colspan="2">0.11 / 0.11</td><td>0.00</td><td>2792.83</td><td>2809.68</td><td colspan="2">2025.02.03 13:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.03 14:48:40</td><td>185</td><td>GOLD</td><td>sell</td><td colspan="2">0.11 / 0.11</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.03 14:48:40</td><td>filled</td><td>tp 2809.68</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.03 17:30:00</td><td>186</td><td>GOLD</td><td>buy</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td>2804.80</td><td>2841.32</td><td colspan="2">2025.02.03 17:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.04 17:00:40</td><td>187</td><td>GOLD</td><td>sell</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.04 17:00:40</td><td>filled</td><td>tp 2841.32</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.04 22:30:00</td><td>188</td><td>GOLD</td><td>buy</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td>2835.84</td><td>2849.41</td><td colspan="2">2025.02.04 22:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.05 04:06:40</td><td>189</td><td>GOLD</td><td>sell</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.05 04:06:40</td><td>filled</td><td>tp 2849.41</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.05 09:45:00</td><td>190</td><td>GOLD</td><td>buy</td><td colspan="2">0.12 / 0.12</td><td>0.00</td><td>2851.64</td><td>2868.18</td><td colspan="2">2025.02.05 09:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.05 10:42:40</td><td>191</td><td>GOLD</td><td>sell</td><td colspan="2">0.12 / 0.12</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.05 10:42:40</td><td>filled</td><td>tp 2868.18</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.05 11:15:00</td><td>192</td><td>GOLD</td><td>buy</td><td colspan="2">0.08 / 0.08</td><td>0.00</td><td>2854.74</td><td>2879.18</td><td colspan="2">2025.02.05 11:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.05 17:46:40</td><td>193</td><td>GOLD</td><td>sell</td><td colspan="2">0.08 / 0.08</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.05 17:46:40</td><td>filled</td><td>tp 2879.18</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.06 17:45:00</td><td>194</td><td>GOLD</td><td>sell</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td>2870.18</td><td>2823.06</td><td colspan="2">2025.02.06 17:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.07 05:02:40</td><td>195</td><td>GOLD</td><td>buy</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.07 05:02:40</td><td>filled</td><td>sl 2870.18</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.10 07:45:00</td><td>196</td><td>GOLD</td><td>buy</td><td colspan="2">0.12 / 0.12</td><td>0.00</td><td>2871.09</td><td>2887.94</td><td colspan="2">2025.02.10 07:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.10 08:46:40</td><td>197</td><td>GOLD</td><td>sell</td><td colspan="2">0.12 / 0.12</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.10 08:46:40</td><td>filled</td><td>tp 2887.94</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.10 12:45:00</td><td>198</td><td>GOLD</td><td>buy</td><td colspan="2">0.03 / 0.03</td><td>0.00</td><td>2875.91</td><td>2932.54</td><td colspan="2">2025.02.10 12:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.11 03:52:40</td><td>199</td><td>GOLD</td><td>sell</td><td colspan="2">0.03 / 0.03</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.11 03:52:40</td><td>filled</td><td>tp 2932.54</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.11 04:00:00</td><td>200</td><td>GOLD</td><td>buy</td><td colspan="2">0.03 / 0.03</td><td>0.00</td><td>2902.79</td><td>2971.89</td><td colspan="2">2025.02.11 04:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.11 12:00:40</td><td>201</td><td>GOLD</td><td>sell</td><td colspan="2">0.03 / 0.03</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.11 12:00:40</td><td>filled</td><td>sl 2902.79</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.12 02:30:00</td><td>202</td><td>GOLD</td><td>buy</td><td colspan="2">2.14 / 2.14</td><td>0.00</td><td>2895.26</td><td>2896.23</td><td colspan="2">2025.02.12 02:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.12 02:33:40</td><td>203</td><td>GOLD</td><td>sell</td><td colspan="2">2.14 / 2.14</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.12 02:33:40</td><td>filled</td><td>sl 2895.26</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.12 20:15:00</td><td>204</td><td>GOLD</td><td>buy</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td>2886.73</td><td>2921.27</td><td colspan="2">2025.02.12 20:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.13 07:23:40</td><td>205</td><td>GOLD</td><td>sell</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.13 07:23:40</td><td>filled</td><td>tp 2921.27</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.14 16:45:00</td><td>206</td><td>GOLD</td><td>sell</td><td colspan="2">0.09 / 0.09</td><td>0.00</td><td>2933.15</td><td>2911.19</td><td colspan="2">2025.02.14 16:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.14 17:17:40</td><td>207</td><td>GOLD</td><td>buy</td><td colspan="2">0.09 / 0.09</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.14 17:17:40</td><td>filled</td><td>tp 2911.19</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.14 21:15:00</td><td>208</td><td>GOLD</td><td>sell</td><td colspan="2">0.02 / 0.02</td><td>0.00</td><td>2928.38</td><td>2831.93</td><td colspan="2">2025.02.14 21:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.18 16:59:20</td><td>209</td><td>GOLD</td><td>buy</td><td colspan="2">0.02 / 0.02</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.18 16:59:20</td><td>filled</td><td>sl 2928.38</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.20 08:45:00</td><td>210</td><td>GOLD</td><td>buy</td><td colspan="2">0.15 / 0.15</td><td>0.00</td><td>2939.18</td><td>2952.62</td><td colspan="2">2025.02.20 08:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.20 09:37:40</td><td>211</td><td>GOLD</td><td>sell</td><td colspan="2">0.15 / 0.15</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.20 09:37:40</td><td>filled</td><td>tp 2952.62</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.21 11:15:00</td><td>212</td><td>GOLD</td><td>sell</td><td colspan="2">0.11 / 0.11</td><td>0.00</td><td>2932.99</td><td>2914.36</td><td colspan="2">2025.02.21 11:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.21 13:11:40</td><td>213</td><td>GOLD</td><td>buy</td><td colspan="2">0.11 / 0.11</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.21 13:11:40</td><td>filled</td><td>sl 2932.99</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.24 12:00:00</td><td>214</td><td>GOLD</td><td>buy</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td>2938.04</td><td>2952.30</td><td colspan="2">2025.02.24 12:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.24 12:43:40</td><td>215</td><td>GOLD</td><td>sell</td><td colspan="2">0.14 / 0.14</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.24 12:43:40</td><td>filled</td><td>sl 2938.04</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.24 15:00:00</td><td>216</td><td>GOLD</td><td>buy</td><td colspan="2">0.07 / 0.07</td><td>0.00</td><td>2934.76</td><td>2961.14</td><td colspan="2">2025.02.24 15:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.24 16:40:20</td><td>217</td><td>GOLD</td><td>sell</td><td colspan="2">0.07 / 0.07</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.24 16:40:20</td><td>filled</td><td>sl 2934.76</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.25 01:30:00</td><td>218</td><td>GOLD</td><td>buy</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td>2930.63</td><td>2976.39</td><td colspan="2">2025.02.25 01:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.25 09:52:40</td><td>219</td><td>GOLD</td><td>sell</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.25 09:52:40</td><td>filled</td><td>sl 2930.63</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.27 23:00:00</td><td>220</td><td>GOLD</td><td>sell</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td>2887.62</td><td>2857.13</td><td colspan="2">2025.02.27 23:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.28 06:20:40</td><td>221</td><td>GOLD</td><td>buy</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td></td><td></td><td colspan="2">2025.02.28 06:20:40</td><td>filled</td><td>tp 2857.13</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.03.03 06:00:00</td><td>222</td><td>GOLD</td><td>sell</td><td colspan="2">0.12 / 0.12</td><td>0.00</td><td>2871.90</td><td>2856.10</td><td colspan="2">2025.03.03 06:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.03.03 12:45:40</td><td>223</td><td>GOLD</td><td>buy</td><td colspan="2">0.12 / 0.12</td><td>0.00</td><td></td><td></td><td colspan="2">2025.03.03 12:45:40</td><td>filled</td><td>sl 2871.90</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.03.17 20:15:00</td><td>224</td><td>GOLD</td><td>buy</td><td colspan="2">0.15 / 0.15</td><td>0.00</td><td>2992.83</td><td>3005.61</td><td colspan="2">2025.03.17 20:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.03.18 03:56:40</td><td>225</td><td>GOLD</td><td>sell</td><td colspan="2">0.15 / 0.15</td><td>0.00</td><td></td><td></td><td colspan="2">2025.03.18 03:56:40</td><td>filled</td><td>tp 3005.61</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.03.18 11:30:00</td><td>226</td><td>GOLD</td><td>buy</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td>3005.93</td><td>3044.43</td><td colspan="2">2025.03.18 11:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.03.19 07:56:40</td><td>227</td><td>GOLD</td><td>sell</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td></td><td></td><td colspan="2">2025.03.19 07:56:40</td><td>filled</td><td>tp 3044.43</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.03.19 09:30:00</td><td>228</td><td>GOLD</td><td>buy</td><td colspan="2">0.15 / 0.15</td><td>0.00</td><td>3034.31</td><td>3047.73</td><td colspan="2">2025.03.19 09:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.03.19 10:08:40</td><td>229</td><td>GOLD</td><td>sell</td><td colspan="2">0.15 / 0.15</td><td>0.00</td><td></td><td></td><td colspan="2">2025.03.19 10:08:40</td><td>filled</td><td>sl 3034.31</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.03.19 22:30:00</td><td>230</td><td>GOLD</td><td>buy</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td>3029.22</td><td>3066.51</td><td colspan="2">2025.03.19 22:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.03.20 12:30:40</td><td>231</td><td>GOLD</td><td>sell</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td></td><td></td><td colspan="2">2025.03.20 12:30:40</td><td>filled</td><td>sl 3029.22</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.03.24 17:45:00</td><td>232</td><td>GOLD</td><td>sell</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td>3028.14</td><td>2997.96</td><td colspan="2">2025.03.24 17:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.03.25 15:36:40</td><td>233</td><td>GOLD</td><td>buy</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td></td><td></td><td colspan="2">2025.03.25 15:36:40</td><td>filled</td><td>sl 3028.14</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.03.31 20:15:00</td><td>234</td><td>GOLD</td><td>buy</td><td colspan="2">0.11 / 0.11</td><td>0.00</td><td>3111.43</td><td>3129.12</td><td colspan="2">2025.03.31 20:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.01 04:01:40</td><td>235</td><td>GOLD</td><td>sell</td><td colspan="2">0.11 / 0.11</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.01 04:01:40</td><td>filled</td><td>tp 3129.12</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.02 05:45:00</td><td>236</td><td>GOLD</td><td>buy</td><td colspan="2">0.03 / 0.03</td><td>0.00</td><td>3107.37</td><td>3160.90</td><td colspan="2">2025.04.02 05:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.02 23:14:20</td><td>237</td><td>GOLD</td><td>sell</td><td colspan="2">0.03 / 0.03</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.02 23:14:20</td><td>filled</td><td>sl 3107.37</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.07 10:45:00</td><td>238</td><td>GOLD</td><td>sell</td><td colspan="2">0.03 / 0.03</td><td>0.00</td><td>3044.45</td><td>2989.14</td><td colspan="2">2025.04.07 10:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.07 14:36:40</td><td>239</td><td>GOLD</td><td>buy</td><td colspan="2">0.03 / 0.03</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.07 14:36:40</td><td>filled</td><td>sl 3044.45</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.07 21:15:00</td><td>240</td><td>GOLD</td><td>sell</td><td colspan="2">0.01 / 0.01</td><td>0.00</td><td>3037.97</td><td>2890.42</td><td colspan="2">2025.04.07 21:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.09 09:56:40</td><td>241</td><td>GOLD</td><td>buy</td><td colspan="2">0.01 / 0.01</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.09 09:56:40</td><td>filled</td><td>sl 3037.97</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.09 18:15:00</td><td>242</td><td>GOLD</td><td>buy</td><td colspan="2">0.02 / 0.02</td><td>0.00</td><td>3042.47</td><td>3114.43</td><td colspan="2">2025.04.09 18:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.10 05:16:40</td><td>243</td><td>GOLD</td><td>sell</td><td colspan="2">0.02 / 0.02</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.10 05:16:40</td><td>filled</td><td>tp 3114.43</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.15 08:30:00</td><td>244</td><td>GOLD</td><td>buy</td><td colspan="2">0.22 / 0.22</td><td>0.00</td><td>3220.12</td><td>3228.70</td><td colspan="2">2025.04.15 08:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.15 10:26:40</td><td>245</td><td>GOLD</td><td>sell</td><td colspan="2">0.22 / 0.22</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.15 10:26:40</td><td>filled</td><td>sl 3220.12</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.16 04:45:00</td><td>246</td><td>GOLD</td><td>buy</td><td colspan="2">0.02 / 0.02</td><td>0.00</td><td>3226.32</td><td>3313.64</td><td colspan="2">2025.04.16 04:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.16 11:15:40</td><td>247</td><td>GOLD</td><td>sell</td><td colspan="2">0.02 / 0.02</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.16 11:15:40</td><td>filled</td><td>tp 3313.64</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.21 06:15:00</td><td>248</td><td>GOLD</td><td>buy</td><td colspan="2">0.03 / 0.03</td><td>0.00</td><td>3351.57</td><td>3417.24</td><td colspan="2">2025.04.21 06:15:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.21 16:00:40</td><td>249</td><td>GOLD</td><td>sell</td><td colspan="2">0.03 / 0.03</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.21 16:00:40</td><td>filled</td><td>tp 3417.24</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.21 18:00:00</td><td>250</td><td>GOLD</td><td>buy</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td>3399.77</td><td>3437.44</td><td colspan="2">2025.04.21 18:00:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.22 02:17:40</td><td>251</td><td>GOLD</td><td>sell</td><td colspan="2">0.05 / 0.05</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.22 02:17:40</td><td>filled</td><td>tp 3437.44</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.22 02:30:00</td><td>252</td><td>GOLD</td><td>buy</td><td colspan="2">0.03 / 0.03</td><td>0.00</td><td>3417.36</td><td>3470.67</td><td colspan="2">2025.04.22 02:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.22 03:03:40</td><td>253</td><td>GOLD</td><td>sell</td><td colspan="2">0.03 / 0.03</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.22 03:03:40</td><td>filled</td><td>sl 3417.36</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.23 20:30:00</td><td>254</td><td>GOLD</td><td>buy</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td>3269.08</td><td>3299.15</td><td colspan="2">2025.04.23 20:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.24 01:02:40</td><td>255</td><td>GOLD</td><td>sell</td><td colspan="2">0.06 / 0.06</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.24 01:02:40</td><td>filled</td><td>tp 3299.15</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.25 21:45:00</td><td>256</td><td>GOLD</td><td>buy</td><td colspan="2">0.08 / 0.08</td><td>0.00</td><td>3280.22</td><td>3305.21</td><td colspan="2">2025.04.25 21:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.25 22:40:40</td><td>257</td><td>GOLD</td><td>sell</td><td colspan="2">0.08 / 0.08</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.25 22:40:40</td><td>filled</td><td>tp 3305.21</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.28 01:45:00</td><td>258</td><td>GOLD</td><td>buy</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td>3287.67</td><td>3335.92</td><td colspan="2">2025.04.28 01:45:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.28 04:30:40</td><td>259</td><td>GOLD</td><td>sell</td><td colspan="2">0.04 / 0.04</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.28 04:30:40</td><td>filled</td><td>sl 3287.67</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.28 13:30:00</td><td>260</td><td>GOLD</td><td>sell</td><td colspan="2">0.23 / 0.23</td><td>0.00</td><td>3287.64</td><td>3279.03</td><td colspan="2">2025.04.28 13:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.28 13:36:40</td><td>261</td><td>GOLD</td><td>buy</td><td colspan="2">0.23 / 0.23</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.28 13:36:40</td><td>filled</td><td>sl 3287.64</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.29 04:30:00</td><td>262</td><td>GOLD</td><td>sell</td><td colspan="2">0.07 / 0.07</td><td>0.00</td><td>3342.74</td><td>3317.11</td><td colspan="2">2025.04.29 04:30:00</td><td>filled</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.29 06:05:40</td><td>263</td><td>GOLD</td><td>buy</td><td colspan="2">0.07 / 0.07</td><td>0.00</td><td></td><td></td><td colspan="2">2025.04.29 06:05:40</td><td>filled</td><td>tp 3317.11</td></tr>
+   <tr>
+      <td nowrap style="height: 10px"></td>
+   </tr>
+   <tr align="center">
+      <th colspan="13" style="height: 25px"><div style="font: 10pt Tahoma"><b>約定</b></div></th>
+   </tr>
+   <tr align="center" bgcolor="#E5F0FC">
+      <td nowrap style="height: 30px"><b>時間</b></td>
+      <td nowrap><b>約定</b></td>
+      <td nowrap><b>銘柄</b></td>
+      <td nowrap><b>タイプ</b></td>
+      <td nowrap><b>新規・決済</b></td>
+      <td nowrap><b>数量</b></td>
+      <td nowrap><b>価格</b></td>
+      <td nowrap><b>注文</b></td>
+      <td nowrap><b>手数料</b></td>
+      <td nowrap><b>スワップ</b></td>
+      <td nowrap><b>損益</b></td>
+      <td nowrap><b>残高</b></td>
+      <td nowrap><b>コメント</b></td>
+   </tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.10 00:00:00</td><td>1</td><td></td><td>balance</td><td></td><td></td><td></td><td></td><td>0.00</td><td>0.00</td><td>10 000.00</td><td>10 000.00</td><td></td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.13 23:30:00</td><td>2</td><td>GOLD</td><td>buy</td><td>in</td><td>0.47</td><td>2336.42</td><td>2</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 000.00</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.14 02:50:20</td><td>3</td><td>GOLD</td><td>sell</td><td>out</td><td>0.47</td><td>2338.96</td><td>3</td><td>0.00</td><td>-121.14</td><td>119.38</td><td>9 998.24</td><td>tp 2338.96</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.14 04:00:00</td><td>4</td><td>GOLD</td><td>buy</td><td>in</td><td>0.64</td><td>2336.60</td><td>4</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 998.24</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.14 04:02:40</td><td>5</td><td>GOLD</td><td>sell</td><td>out</td><td>0.64</td><td>2338.47</td><td>5</td><td>0.00</td><td>0.00</td><td>119.68</td><td>10 117.92</td><td>tp 2338.47</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.14 22:15:00</td><td>6</td><td>GOLD</td><td>buy</td><td>in</td><td>0.09</td><td>2357.15</td><td>6</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 117.92</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.15 11:41:40</td><td>7</td><td>GOLD</td><td>sell</td><td>out</td><td>0.09</td><td>2370.35</td><td>7</td><td>0.00</td><td>-23.20</td><td>118.80</td><td>10 213.52</td><td>tp 2370.35</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.15 12:30:00</td><td>8</td><td>GOLD</td><td>buy</td><td>in</td><td>0.06</td><td>2372.24</td><td>8</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 213.52</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.15 16:51:40</td><td>9</td><td>GOLD</td><td>sell</td><td>out</td><td>0.06</td><td>2356.72</td><td>9</td><td>0.00</td><td>0.00</td><td>-93.12</td><td>10 120.40</td><td>sl 2356.72</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.15 21:15:00</td><td>10</td><td>GOLD</td><td>buy</td><td>in</td><td>0.08</td><td>2386.42</td><td>10</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 120.40</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.16 16:19:40</td><td>11</td><td>GOLD</td><td>sell</td><td>out</td><td>0.08</td><td>2375.01</td><td>11</td><td>0.00</td><td>-61.86</td><td>-91.28</td><td>9 967.26</td><td>sl 2375.01</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.17 18:45:00</td><td>12</td><td>GOLD</td><td>buy</td><td>in</td><td>0.05</td><td>2404.84</td><td>12</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 967.26</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.20 04:00:40</td><td>13</td><td>GOLD</td><td>sell</td><td>out</td><td>0.05</td><td>2426.57</td><td>13</td><td>0.00</td><td>-12.89</td><td>108.65</td><td>10 063.02</td><td>tp 2426.57</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.20 04:45:00</td><td>14</td><td>GOLD</td><td>buy</td><td>in</td><td>0.06</td><td>2430.90</td><td>14</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 063.02</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.20 08:44:40</td><td>15</td><td>GOLD</td><td>sell</td><td>out</td><td>0.06</td><td>2448.36</td><td>15</td><td>0.00</td><td>0.00</td><td>104.76</td><td>10 167.78</td><td>tp 2448.36</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.20 08:45:00</td><td>16</td><td>GOLD</td><td>buy</td><td>in</td><td>0.04</td><td>2449.08</td><td>16</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 167.78</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.20 14:40:40</td><td>17</td><td>GOLD</td><td>sell</td><td>out</td><td>0.04</td><td>2428.45</td><td>17</td><td>0.00</td><td>0.00</td><td>-82.52</td><td>10 085.26</td><td>sl 2428.45</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.22 19:00:00</td><td>18</td><td>GOLD</td><td>sell</td><td>in</td><td>0.04</td><td>2391.88</td><td>18</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 085.26</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.23 08:50:40</td><td>19</td><td>GOLD</td><td>buy</td><td>out</td><td>0.04</td><td>2364.14</td><td>19</td><td>0.00</td><td>0.22</td><td>110.96</td><td>10 196.44</td><td>tp 2364.14</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.23 09:45:00</td><td>20</td><td>GOLD</td><td>sell</td><td>in</td><td>0.1</td><td>2364.13</td><td>20</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 196.44</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.05.23 16:50:40</td><td>21</td><td>GOLD</td><td>buy</td><td>out</td><td>0.1</td><td>2352.15</td><td>21</td><td>0.00</td><td>0.00</td><td>119.80</td><td>10 316.24</td><td>tp 2352.15</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.05.23 19:00:00</td><td>22</td><td>GOLD</td><td>sell</td><td>in</td><td>0.04</td><td>2345.98</td><td>22</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 316.24</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.03 08:44:40</td><td>23</td><td>GOLD</td><td>buy</td><td>out</td><td>0.04</td><td>2317.34</td><td>23</td><td>0.00</td><td>0.64</td><td>114.56</td><td>10 431.44</td><td>tp 2317.34</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.10 06:00:00</td><td>24</td><td>GOLD</td><td>buy</td><td>in</td><td>0.39</td><td>2296.42</td><td>24</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 431.44</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.10 07:02:40</td><td>25</td><td>GOLD</td><td>sell</td><td>out</td><td>0.39</td><td>2293.80</td><td>25</td><td>0.00</td><td>0.00</td><td>-102.18</td><td>10 329.26</td><td>sl 2293.80</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.11 09:15:00</td><td>26</td><td>GOLD</td><td>sell</td><td>in</td><td>0.3</td><td>2300.94</td><td>26</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 329.26</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.11 09:36:40</td><td>27</td><td>GOLD</td><td>buy</td><td>out</td><td>0.3</td><td>2304.37</td><td>27</td><td>0.00</td><td>0.00</td><td>-102.90</td><td>10 226.36</td><td>sl 2304.37</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.11 09:45:00</td><td>28</td><td>GOLD</td><td>sell</td><td>in</td><td>0.61</td><td>2302.65</td><td>28</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 226.36</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.11 10:04:40</td><td>29</td><td>GOLD</td><td>buy</td><td>out</td><td>0.61</td><td>2304.31</td><td>29</td><td>0.00</td><td>0.00</td><td>-101.26</td><td>10 125.10</td><td>sl 2304.31</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.12 17:00:00</td><td>30</td><td>GOLD</td><td>buy</td><td>in</td><td>0.05</td><td>2330.01</td><td>30</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 125.10</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.13 04:25:40</td><td>31</td><td>GOLD</td><td>sell</td><td>out</td><td>0.05</td><td>2311.44</td><td>31</td><td>0.00</td><td>-38.66</td><td>-92.85</td><td>9 993.59</td><td>sl 2311.44</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.14 19:30:00</td><td>32</td><td>GOLD</td><td>sell</td><td>in</td><td>0.15</td><td>2329.13</td><td>32</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 993.59</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.14 20:36:20</td><td>33</td><td>GOLD</td><td>buy</td><td>out</td><td>0.15</td><td>2335.39</td><td>33</td><td>0.00</td><td>0.00</td><td>-93.90</td><td>9 899.69</td><td>sl 2335.39</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.18 21:00:00</td><td>34</td><td>GOLD</td><td>buy</td><td>in</td><td>0.13</td><td>2329.95</td><td>34</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 899.69</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.20 04:41:40</td><td>35</td><td>GOLD</td><td>sell</td><td>out</td><td>0.13</td><td>2338.45</td><td>35</td><td>0.00</td><td>-134.03</td><td>110.50</td><td>9 876.16</td><td>tp 2338.45</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.21 09:30:00</td><td>36</td><td>GOLD</td><td>buy</td><td>in</td><td>0.26</td><td>2361.69</td><td>36</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 876.16</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.21 09:47:40</td><td>37</td><td>GOLD</td><td>sell</td><td>out</td><td>0.26</td><td>2358.01</td><td>37</td><td>0.00</td><td>0.00</td><td>-95.68</td><td>9 780.48</td><td>sl 2358.01</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.24 05:30:00</td><td>38</td><td>GOLD</td><td>buy</td><td>in</td><td>0.23</td><td>2321.72</td><td>38</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 780.48</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.24 08:30:40</td><td>39</td><td>GOLD</td><td>sell</td><td>out</td><td>0.23</td><td>2326.74</td><td>39</td><td>0.00</td><td>0.00</td><td>115.46</td><td>9 895.94</td><td>tp 2326.74</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.25 19:00:00</td><td>40</td><td>GOLD</td><td>sell</td><td>in</td><td>0.28</td><td>2324.68</td><td>40</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 895.94</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.25 19:24:40</td><td>41</td><td>GOLD</td><td>buy</td><td>out</td><td>0.28</td><td>2320.50</td><td>41</td><td>0.00</td><td>0.00</td><td>117.04</td><td>10 012.98</td><td>tp 2320.50</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.25 20:30:00</td><td>42</td><td>GOLD</td><td>sell</td><td>in</td><td>0.17</td><td>2319.08</td><td>42</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 012.98</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.26 04:41:40</td><td>43</td><td>GOLD</td><td>buy</td><td>out</td><td>0.17</td><td>2312.04</td><td>43</td><td>0.00</td><td>0.31</td><td>119.68</td><td>10 132.97</td><td>tp 2312.04</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.06.27 21:15:00</td><td>44</td><td>GOLD</td><td>buy</td><td>in</td><td>0.25</td><td>2324.00</td><td>44</td><td>0.00</td><td>0.00</td><td>0.00</td><td>10 132.97</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.06.28 04:07:40</td><td>45</td><td>GOLD</td><td>sell</td><td>out</td><td>0.25</td><td>2320.06</td><td>45</td><td>0.00</td><td>-64.44</td><td>-98.50</td><td>9 970.03</td><td>sl 2320.06</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.01 15:30:00</td><td>46</td><td>GOLD</td><td>buy</td><td>in</td><td>0.07</td><td>2334.71</td><td>46</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 970.03</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.01 17:22:40</td><td>47</td><td>GOLD</td><td>sell</td><td>out</td><td>0.07</td><td>2321.74</td><td>47</td><td>0.00</td><td>0.00</td><td>-90.79</td><td>9 879.24</td><td>sl 2321.74</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.02 15:30:00</td><td>48</td><td>GOLD</td><td>sell</td><td>in</td><td>0.22</td><td>2322.08</td><td>48</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 879.24</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.02 15:46:40</td><td>49</td><td>GOLD</td><td>buy</td><td>out</td><td>0.22</td><td>2326.53</td><td>49</td><td>0.00</td><td>0.00</td><td>-97.90</td><td>9 781.34</td><td>sl 2326.53</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.05 08:30:00</td><td>50</td><td>GOLD</td><td>buy</td><td>in</td><td>0.27</td><td>2362.97</td><td>50</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 781.34</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.05 10:43:40</td><td>51</td><td>GOLD</td><td>sell</td><td>out</td><td>0.27</td><td>2367.27</td><td>51</td><td>0.00</td><td>0.00</td><td>116.10</td><td>9 897.44</td><td>tp 2367.27</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.05 12:30:00</td><td>52</td><td>GOLD</td><td>buy</td><td>in</td><td>0.29</td><td>2365.39</td><td>52</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 897.44</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.05 12:59:20</td><td>53</td><td>GOLD</td><td>sell</td><td>out</td><td>0.29</td><td>2362.08</td><td>53</td><td>0.00</td><td>0.00</td><td>-95.99</td><td>9 801.45</td><td>sl 2362.08</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.05 22:45:00</td><td>54</td><td>GOLD</td><td>buy</td><td>in</td><td>0.1</td><td>2390.70</td><td>54</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 801.45</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.08 05:52:40</td><td>55</td><td>GOLD</td><td>sell</td><td>out</td><td>0.1</td><td>2381.37</td><td>55</td><td>0.00</td><td>-25.77</td><td>-93.30</td><td>9 682.38</td><td>sl 2381.37</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.10 16:15:00</td><td>56</td><td>GOLD</td><td>buy</td><td>in</td><td>0.12</td><td>2379.20</td><td>56</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 682.38</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.10 20:24:40</td><td>57</td><td>GOLD</td><td>sell</td><td>out</td><td>0.12</td><td>2371.59</td><td>57</td><td>0.00</td><td>0.00</td><td>-91.32</td><td>9 591.06</td><td>sl 2371.59</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.16 09:15:00</td><td>58</td><td>GOLD</td><td>buy</td><td>in</td><td>0.19</td><td>2429.91</td><td>58</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 591.06</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.16 10:17:40</td><td>59</td><td>GOLD</td><td>sell</td><td>out</td><td>0.19</td><td>2435.92</td><td>59</td><td>0.00</td><td>0.00</td><td>114.19</td><td>9 705.25</td><td>tp 2435.92</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.16 13:30:00</td><td>60</td><td>GOLD</td><td>buy</td><td>in</td><td>0.13</td><td>2440.48</td><td>60</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 705.25</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.16 15:37:40</td><td>61</td><td>GOLD</td><td>sell</td><td>out</td><td>0.13</td><td>2433.02</td><td>61</td><td>0.00</td><td>0.00</td><td>-96.98</td><td>9 608.27</td><td>sl 2433.02</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.07.17 02:45:00</td><td>62</td><td>GOLD</td><td>buy</td><td>in</td><td>0.12</td><td>2468.38</td><td>62</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 608.27</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.07.17 04:41:40</td><td>63</td><td>GOLD</td><td>sell</td><td>out</td><td>0.12</td><td>2477.76</td><td>63</td><td>0.00</td><td>0.00</td><td>112.56</td><td>9 720.83</td><td>tp 2477.76</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.02 14:45:00</td><td>64</td><td>GOLD</td><td>buy</td><td>in</td><td>1.26</td><td>2459.83</td><td>64</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 720.83</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.02 14:45:40</td><td>65</td><td>GOLD</td><td>sell</td><td>out</td><td>1.26</td><td>2459.06</td><td>65</td><td>0.00</td><td>0.00</td><td>-97.02</td><td>9 623.81</td><td>sl 2459.06</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.02 22:00:00</td><td>66</td><td>GOLD</td><td>buy</td><td>in</td><td>0.15</td><td>2429.17</td><td>66</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 623.81</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.02 22:51:20</td><td>67</td><td>GOLD</td><td>sell</td><td>out</td><td>0.15</td><td>2436.86</td><td>67</td><td>0.00</td><td>0.00</td><td>115.35</td><td>9 739.16</td><td>tp 2436.86</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.07 16:30:00</td><td>68</td><td>GOLD</td><td>buy</td><td>in</td><td>0.14</td><td>2400.92</td><td>68</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 739.16</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.07 18:31:40</td><td>69</td><td>GOLD</td><td>sell</td><td>out</td><td>0.14</td><td>2394.13</td><td>69</td><td>0.00</td><td>0.00</td><td>-95.06</td><td>9 644.10</td><td>sl 2394.13</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.19 08:15:00</td><td>70</td><td>GOLD</td><td>sell</td><td>in</td><td>0.2</td><td>2499.89</td><td>70</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 644.10</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.19 09:10:40</td><td>71</td><td>GOLD</td><td>buy</td><td>out</td><td>0.2</td><td>2504.63</td><td>71</td><td>0.00</td><td>0.00</td><td>-94.80</td><td>9 549.30</td><td>sl 2504.63</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.08.19 09:45:00</td><td>72</td><td>GOLD</td><td>sell</td><td>in</td><td>2.8</td><td>2504.29</td><td>72</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 549.30</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.08.19 09:45:20</td><td>73</td><td>GOLD</td><td>buy</td><td>out</td><td>2.8</td><td>2504.63</td><td>73</td><td>0.00</td><td>0.00</td><td>-95.20</td><td>9 454.10</td><td>sl 2504.63</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.03 05:00:00</td><td>74</td><td>GOLD</td><td>sell</td><td>in</td><td>0.19</td><td>2493.60</td><td>74</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 454.10</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.03 09:56:40</td><td>75</td><td>GOLD</td><td>buy</td><td>out</td><td>0.19</td><td>2498.43</td><td>75</td><td>0.00</td><td>0.00</td><td>-91.77</td><td>9 362.33</td><td>sl 2498.43</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.03 18:45:00</td><td>76</td><td>GOLD</td><td>sell</td><td>in</td><td>0.05</td><td>2484.19</td><td>76</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 362.33</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.05 08:51:40</td><td>77</td><td>GOLD</td><td>buy</td><td>out</td><td>0.05</td><td>2502.01</td><td>77</td><td>0.00</td><td>0.36</td><td>-89.10</td><td>9 273.59</td><td>sl 2502.01</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.10 16:45:00</td><td>78</td><td>GOLD</td><td>buy</td><td>in</td><td>0.14</td><td>2510.45</td><td>78</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 273.59</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.10 17:14:40</td><td>79</td><td>GOLD</td><td>sell</td><td>out</td><td>0.14</td><td>2504.08</td><td>79</td><td>0.00</td><td>0.00</td><td>-89.18</td><td>9 184.41</td><td>sl 2504.08</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.10 21:15:00</td><td>80</td><td>GOLD</td><td>buy</td><td>in</td><td>0.06</td><td>2514.01</td><td>80</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 184.41</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.12 15:41:40</td><td>81</td><td>GOLD</td><td>sell</td><td>out</td><td>0.06</td><td>2529.95</td><td>81</td><td>0.00</td><td>-61.85</td><td>95.64</td><td>9 218.20</td><td>tp 2529.95</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.18 23:30:00</td><td>82</td><td>GOLD</td><td>sell</td><td>in</td><td>0.02</td><td>2559.34</td><td>82</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 218.20</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.20 09:34:40</td><td>83</td><td>GOLD</td><td>buy</td><td>out</td><td>0.02</td><td>2600.06</td><td>83</td><td>0.00</td><td>0.15</td><td>-81.44</td><td>9 136.91</td><td>sl 2600.06</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.26 11:30:00</td><td>84</td><td>GOLD</td><td>buy</td><td>in</td><td>0.09</td><td>2669.14</td><td>84</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 136.91</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.26 14:37:40</td><td>85</td><td>GOLD</td><td>sell</td><td>out</td><td>0.09</td><td>2680.91</td><td>85</td><td>0.00</td><td>0.00</td><td>105.93</td><td>9 242.84</td><td>tp 2680.91</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.26 15:30:00</td><td>86</td><td>GOLD</td><td>buy</td><td>in</td><td>0.07</td><td>2678.49</td><td>86</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 242.84</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.26 16:11:40</td><td>87</td><td>GOLD</td><td>sell</td><td>out</td><td>0.07</td><td>2666.74</td><td>87</td><td>0.00</td><td>0.00</td><td>-82.25</td><td>9 160.59</td><td>sl 2666.74</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.26 22:45:00</td><td>88</td><td>GOLD</td><td>buy</td><td>in</td><td>0.08</td><td>2674.18</td><td>88</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 160.59</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.09.27 08:35:40</td><td>89</td><td>GOLD</td><td>sell</td><td>out</td><td>0.08</td><td>2662.76</td><td>89</td><td>0.00</td><td>-20.62</td><td>-91.36</td><td>9 048.61</td><td>sl 2662.76</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.09.30 14:45:00</td><td>90</td><td>GOLD</td><td>sell</td><td>in</td><td>0.05</td><td>2641.32</td><td>90</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 048.61</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.01 15:25:40</td><td>91</td><td>GOLD</td><td>buy</td><td>out</td><td>0.05</td><td>2656.57</td><td>91</td><td>0.00</td><td>0.09</td><td>-76.25</td><td>8 972.45</td><td>sl 2656.57</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.02 08:30:00</td><td>92</td><td>GOLD</td><td>sell</td><td>in</td><td>0.07</td><td>2648.93</td><td>92</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 972.45</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.02 17:04:40</td><td>93</td><td>GOLD</td><td>buy</td><td>out</td><td>0.07</td><td>2661.48</td><td>93</td><td>0.00</td><td>0.00</td><td>-87.85</td><td>8 884.60</td><td>sl 2661.48</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.04 16:45:00</td><td>94</td><td>GOLD</td><td>sell</td><td>in</td><td>0.08</td><td>2651.64</td><td>94</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 884.60</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.04 18:03:40</td><td>95</td><td>GOLD</td><td>buy</td><td>out</td><td>0.08</td><td>2662.50</td><td>95</td><td>0.00</td><td>0.00</td><td>-86.88</td><td>8 797.72</td><td>sl 2662.50</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.09 22:15:00</td><td>96</td><td>GOLD</td><td>sell</td><td>in</td><td>0.28</td><td>2608.84</td><td>96</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 797.72</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.10 04:44:20</td><td>97</td><td>GOLD</td><td>buy</td><td>out</td><td>0.28</td><td>2611.91</td><td>97</td><td>0.00</td><td>1.52</td><td>-85.96</td><td>8 713.28</td><td>sl 2611.91</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.15 20:00:00</td><td>98</td><td>GOLD</td><td>buy</td><td>in</td><td>0.05</td><td>2662.03</td><td>98</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 713.28</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.16 12:04:40</td><td>99</td><td>GOLD</td><td>sell</td><td>out</td><td>0.05</td><td>2681.42</td><td>99</td><td>0.00</td><td>-12.89</td><td>96.95</td><td>8 797.34</td><td>tp 2681.42</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.16 13:30:00</td><td>100</td><td>GOLD</td><td>buy</td><td>in</td><td>0.24</td><td>2675.83</td><td>100</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 797.34</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.16 14:56:40</td><td>101</td><td>GOLD</td><td>sell</td><td>out</td><td>0.24</td><td>2680.16</td><td>101</td><td>0.00</td><td>0.00</td><td>103.92</td><td>8 901.26</td><td>tp 2680.16</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.17 05:45:00</td><td>102</td><td>GOLD</td><td>buy</td><td>in</td><td>0.1</td><td>2681.29</td><td>102</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 901.26</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.17 17:26:40</td><td>103</td><td>GOLD</td><td>sell</td><td>out</td><td>0.1</td><td>2691.29</td><td>103</td><td>0.00</td><td>0.00</td><td>100.00</td><td>9 001.26</td><td>tp 2691.29</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.17 23:45:00</td><td>104</td><td>GOLD</td><td>buy</td><td>in</td><td>0.3</td><td>2691.65</td><td>104</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 001.26</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.18 03:32:40</td><td>105</td><td>GOLD</td><td>sell</td><td>out</td><td>0.3</td><td>2695.19</td><td>105</td><td>0.00</td><td>-77.32</td><td>106.20</td><td>9 030.14</td><td>tp 2695.19</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.18 03:45:00</td><td>106</td><td>GOLD</td><td>buy</td><td>in</td><td>0.23</td><td>2694.60</td><td>106</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 030.14</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.18 04:24:40</td><td>107</td><td>GOLD</td><td>sell</td><td>out</td><td>0.23</td><td>2699.18</td><td>107</td><td>0.00</td><td>0.00</td><td>105.34</td><td>9 135.48</td><td>tp 2699.18</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.18 04:30:00</td><td>108</td><td>GOLD</td><td>buy</td><td>in</td><td>0.11</td><td>2699.90</td><td>108</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 135.48</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.18 05:25:40</td><td>109</td><td>GOLD</td><td>sell</td><td>out</td><td>0.11</td><td>2709.28</td><td>109</td><td>0.00</td><td>0.00</td><td>103.18</td><td>9 238.66</td><td>tp 2709.28</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.18 07:30:00</td><td>110</td><td>GOLD</td><td>buy</td><td>in</td><td>0.05</td><td>2709.49</td><td>110</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 238.66</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.21 05:29:20</td><td>111</td><td>GOLD</td><td>sell</td><td>out</td><td>0.05</td><td>2729.72</td><td>111</td><td>0.00</td><td>-12.89</td><td>101.15</td><td>9 326.92</td><td>tp 2729.72</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.21 07:15:00</td><td>112</td><td>GOLD</td><td>buy</td><td>in</td><td>0.13</td><td>2731.06</td><td>112</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 326.92</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.21 09:00:40</td><td>113</td><td>GOLD</td><td>sell</td><td>out</td><td>0.13</td><td>2724.25</td><td>113</td><td>0.00</td><td>0.00</td><td>-88.53</td><td>9 238.39</td><td>sl 2724.25</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.21 12:00:00</td><td>114</td><td>GOLD</td><td>buy</td><td>in</td><td>0.14</td><td>2731.56</td><td>114</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 238.39</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.21 15:36:40</td><td>115</td><td>GOLD</td><td>sell</td><td>out</td><td>0.14</td><td>2739.18</td><td>115</td><td>0.00</td><td>0.00</td><td>106.68</td><td>9 345.07</td><td>tp 2739.18</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.21 20:45:00</td><td>116</td><td>GOLD</td><td>buy</td><td>in</td><td>0.21</td><td>2722.26</td><td>116</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 345.07</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.21 21:54:40</td><td>117</td><td>GOLD</td><td>sell</td><td>out</td><td>0.21</td><td>2717.94</td><td>117</td><td>0.00</td><td>0.00</td><td>-90.72</td><td>9 254.35</td><td>sl 2717.94</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.22 07:00:00</td><td>118</td><td>GOLD</td><td>buy</td><td>in</td><td>0.08</td><td>2731.21</td><td>118</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 254.35</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.22 18:15:40</td><td>119</td><td>GOLD</td><td>sell</td><td>out</td><td>0.08</td><td>2744.05</td><td>119</td><td>0.00</td><td>0.00</td><td>102.72</td><td>9 357.07</td><td>tp 2744.05</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.22 18:45:00</td><td>120</td><td>GOLD</td><td>buy</td><td>in</td><td>0.17</td><td>2739.11</td><td>120</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 357.07</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.22 20:00:40</td><td>121</td><td>GOLD</td><td>sell</td><td>out</td><td>0.17</td><td>2745.70</td><td>121</td><td>0.00</td><td>0.00</td><td>112.03</td><td>9 469.10</td><td>tp 2745.70</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.22 21:15:00</td><td>122</td><td>GOLD</td><td>buy</td><td>in</td><td>0.1</td><td>2745.78</td><td>122</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 469.10</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.23 11:29:40</td><td>123</td><td>GOLD</td><td>sell</td><td>out</td><td>0.1</td><td>2756.71</td><td>123</td><td>0.00</td><td>-25.77</td><td>109.30</td><td>9 552.63</td><td>tp 2756.71</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.25 07:15:00</td><td>124</td><td>GOLD</td><td>sell</td><td>in</td><td>0.1</td><td>2726.06</td><td>124</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 552.63</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.25 17:10:40</td><td>125</td><td>GOLD</td><td>buy</td><td>out</td><td>0.1</td><td>2735.08</td><td>125</td><td>0.00</td><td>0.00</td><td>-90.20</td><td>9 462.43</td><td>sl 2735.08</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.28 20:15:00</td><td>126</td><td>GOLD</td><td>buy</td><td>in</td><td>0.35</td><td>2742.10</td><td>126</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 462.43</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.29 02:31:40</td><td>127</td><td>GOLD</td><td>sell</td><td>out</td><td>0.35</td><td>2745.29</td><td>127</td><td>0.00</td><td>-90.21</td><td>111.65</td><td>9 483.87</td><td>tp 2745.29</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.29 09:30:00</td><td>128</td><td>GOLD</td><td>buy</td><td>in</td><td>0.18</td><td>2753.83</td><td>128</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 483.87</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.29 10:22:40</td><td>129</td><td>GOLD</td><td>sell</td><td>out</td><td>0.18</td><td>2748.77</td><td>129</td><td>0.00</td><td>0.00</td><td>-91.08</td><td>9 392.79</td><td>sl 2748.77</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.29 10:30:00</td><td>130</td><td>GOLD</td><td>buy</td><td>in</td><td>0.62</td><td>2750.27</td><td>130</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 392.79</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.29 10:35:40</td><td>131</td><td>GOLD</td><td>sell</td><td>out</td><td>0.62</td><td>2752.07</td><td>131</td><td>0.00</td><td>0.00</td><td>111.60</td><td>9 504.39</td><td>tp 2752.07</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.30 01:15:00</td><td>132</td><td>GOLD</td><td>buy</td><td>in</td><td>0.14</td><td>2774.49</td><td>132</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 504.39</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.30 07:33:40</td><td>133</td><td>GOLD</td><td>sell</td><td>out</td><td>0.14</td><td>2782.20</td><td>133</td><td>0.00</td><td>0.00</td><td>107.94</td><td>9 612.33</td><td>tp 2782.20</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.30 09:30:00</td><td>134</td><td>GOLD</td><td>buy</td><td>in</td><td>0.11</td><td>2784.45</td><td>134</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 612.33</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.30 14:15:40</td><td>135</td><td>GOLD</td><td>sell</td><td>out</td><td>0.11</td><td>2775.88</td><td>135</td><td>0.00</td><td>0.00</td><td>-94.27</td><td>9 518.06</td><td>sl 2775.88</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.30 19:30:00</td><td>136</td><td>GOLD</td><td>buy</td><td>in</td><td>0.05</td><td>2789.19</td><td>136</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 518.06</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.10.31 15:00:40</td><td>137</td><td>GOLD</td><td>sell</td><td>out</td><td>0.05</td><td>2771.79</td><td>137</td><td>0.00</td><td>-38.66</td><td>-87.00</td><td>9 392.40</td><td>sl 2771.79</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.10.31 22:00:00</td><td>138</td><td>GOLD</td><td>buy</td><td>in</td><td>0.1</td><td>2746.71</td><td>138</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 392.40</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.01 08:09:20</td><td>139</td><td>GOLD</td><td>sell</td><td>out</td><td>0.1</td><td>2757.05</td><td>139</td><td>0.00</td><td>-25.77</td><td>103.40</td><td>9 470.03</td><td>tp 2757.05</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.05 05:15:00</td><td>140</td><td>GOLD</td><td>sell</td><td>in</td><td>0.13</td><td>2729.16</td><td>140</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 470.03</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.05 05:56:40</td><td>141</td><td>GOLD</td><td>buy</td><td>out</td><td>0.13</td><td>2736.04</td><td>141</td><td>0.00</td><td>0.00</td><td>-89.44</td><td>9 380.59</td><td>sl 2736.04</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.13 01:15:00</td><td>142</td><td>GOLD</td><td>sell</td><td>in</td><td>0.37</td><td>2598.76</td><td>142</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 380.59</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.13 03:00:40</td><td>143</td><td>GOLD</td><td>buy</td><td>out</td><td>0.37</td><td>2601.25</td><td>143</td><td>0.00</td><td>0.00</td><td>-92.13</td><td>9 288.46</td><td>sl 2601.25</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.13 20:15:00</td><td>144</td><td>GOLD</td><td>sell</td><td>in</td><td>0.04</td><td>2584.39</td><td>144</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 288.46</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.14 07:37:40</td><td>145</td><td>GOLD</td><td>buy</td><td>out</td><td>0.04</td><td>2557.59</td><td>145</td><td>0.00</td><td>0.22</td><td>107.20</td><td>9 395.88</td><td>tp 2557.59</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.14 12:15:00</td><td>146</td><td>GOLD</td><td>sell</td><td>in</td><td>0.06</td><td>2544.50</td><td>146</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 395.88</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.14 15:42:40</td><td>147</td><td>GOLD</td><td>buy</td><td>out</td><td>0.06</td><td>2559.76</td><td>147</td><td>0.00</td><td>0.00</td><td>-91.56</td><td>9 304.32</td><td>sl 2559.76</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.27 23:30:00</td><td>148</td><td>GOLD</td><td>sell</td><td>in</td><td>0.16</td><td>2634.74</td><td>148</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 304.32</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.28 03:07:40</td><td>149</td><td>GOLD</td><td>buy</td><td>out</td><td>0.16</td><td>2628.06</td><td>149</td><td>0.00</td><td>0.87</td><td>106.88</td><td>9 412.07</td><td>tp 2628.06</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.11.28 12:30:00</td><td>150</td><td>GOLD</td><td>buy</td><td>in</td><td>0.06</td><td>2645.49</td><td>150</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 412.07</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.11.29 06:41:20</td><td>151</td><td>GOLD</td><td>sell</td><td>out</td><td>0.06</td><td>2664.14</td><td>151</td><td>0.00</td><td>-15.46</td><td>111.90</td><td>9 508.51</td><td>tp 2664.14</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.02 07:15:00</td><td>152</td><td>GOLD</td><td>buy</td><td>in</td><td>0.52</td><td>2625.73</td><td>152</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 508.51</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.02 07:17:40</td><td>153</td><td>GOLD</td><td>sell</td><td>out</td><td>0.52</td><td>2623.91</td><td>153</td><td>0.00</td><td>0.00</td><td>-94.64</td><td>9 413.87</td><td>sl 2623.91</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.06 11:45:00</td><td>154</td><td>GOLD</td><td>buy</td><td>in</td><td>0.13</td><td>2642.65</td><td>154</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 413.87</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.06 12:39:40</td><td>155</td><td>GOLD</td><td>sell</td><td>out</td><td>0.13</td><td>2635.85</td><td>155</td><td>0.00</td><td>0.00</td><td>-88.40</td><td>9 325.47</td><td>sl 2635.85</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.11 20:45:00</td><td>156</td><td>GOLD</td><td>buy</td><td>in</td><td>0.04</td><td>2716.70</td><td>156</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 325.47</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.12 16:01:40</td><td>157</td><td>GOLD</td><td>sell</td><td>out</td><td>0.04</td><td>2696.34</td><td>157</td><td>0.00</td><td>-30.93</td><td>-81.44</td><td>9 213.10</td><td>sl 2696.34</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.18 17:30:00</td><td>158</td><td>GOLD</td><td>sell</td><td>in</td><td>0.07</td><td>2636.31</td><td>158</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 213.10</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.18 21:07:40</td><td>159</td><td>GOLD</td><td>buy</td><td>out</td><td>0.07</td><td>2620.59</td><td>159</td><td>0.00</td><td>0.00</td><td>110.04</td><td>9 323.14</td><td>tp 2620.59</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.19 07:30:00</td><td>160</td><td>GOLD</td><td>sell</td><td>in</td><td>0.22</td><td>2609.65</td><td>160</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 323.14</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.19 08:04:40</td><td>161</td><td>GOLD</td><td>buy</td><td>out</td><td>0.22</td><td>2604.60</td><td>161</td><td>0.00</td><td>0.00</td><td>111.10</td><td>9 434.24</td><td>tp 2604.60</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.19 20:15:00</td><td>162</td><td>GOLD</td><td>sell</td><td>in</td><td>0.17</td><td>2595.26</td><td>162</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 434.24</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.19 21:00:40</td><td>163</td><td>GOLD</td><td>buy</td><td>out</td><td>0.17</td><td>2600.58</td><td>163</td><td>0.00</td><td>0.00</td><td>-90.44</td><td>9 343.80</td><td>sl 2600.58</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.20 01:30:00</td><td>164</td><td>GOLD</td><td>sell</td><td>in</td><td>0.16</td><td>2594.44</td><td>164</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 343.80</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.20 03:33:40</td><td>165</td><td>GOLD</td><td>buy</td><td>out</td><td>0.16</td><td>2600.24</td><td>165</td><td>0.00</td><td>0.00</td><td>-92.80</td><td>9 251.00</td><td>sl 2600.24</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.23 08:15:00</td><td>166</td><td>GOLD</td><td>buy</td><td>in</td><td>0.17</td><td>2627.29</td><td>166</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 251.00</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.23 12:31:40</td><td>167</td><td>GOLD</td><td>sell</td><td>out</td><td>0.17</td><td>2622.11</td><td>167</td><td>0.00</td><td>0.00</td><td>-88.06</td><td>9 162.94</td><td>sl 2622.11</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2024.12.27 18:30:00</td><td>168</td><td>GOLD</td><td>buy</td><td>in</td><td>0.14</td><td>2619.26</td><td>168</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 162.94</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2024.12.27 22:31:40</td><td>169</td><td>GOLD</td><td>sell</td><td>out</td><td>0.14</td><td>2612.79</td><td>169</td><td>0.00</td><td>0.00</td><td>-90.58</td><td>9 072.36</td><td>sl 2612.79</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.08 18:15:00</td><td>170</td><td>GOLD</td><td>buy</td><td>in</td><td>0.11</td><td>2664.88</td><td>170</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 072.36</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.08 19:36:40</td><td>171</td><td>GOLD</td><td>sell</td><td>out</td><td>0.11</td><td>2656.71</td><td>171</td><td>0.00</td><td>0.00</td><td>-89.87</td><td>8 982.49</td><td>sl 2656.71</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.08 23:45:00</td><td>172</td><td>GOLD</td><td>buy</td><td>in</td><td>0.07</td><td>2662.72</td><td>172</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 982.49</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.09 15:27:40</td><td>173</td><td>GOLD</td><td>sell</td><td>out</td><td>0.07</td><td>2676.30</td><td>173</td><td>0.00</td><td>-54.13</td><td>95.06</td><td>9 023.42</td><td>tp 2676.30</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.10 12:45:00</td><td>174</td><td>GOLD</td><td>buy</td><td>in</td><td>0.24</td><td>2679.61</td><td>174</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 023.42</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.10 14:39:40</td><td>175</td><td>GOLD</td><td>sell</td><td>out</td><td>0.24</td><td>2675.91</td><td>175</td><td>0.00</td><td>0.00</td><td>-88.80</td><td>8 934.62</td><td>sl 2675.91</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.10 18:15:00</td><td>176</td><td>GOLD</td><td>buy</td><td>in</td><td>0.03</td><td>2691.47</td><td>176</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 934.62</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.13 17:55:40</td><td>177</td><td>GOLD</td><td>sell</td><td>out</td><td>0.03</td><td>2663.58</td><td>177</td><td>0.00</td><td>-7.73</td><td>-83.67</td><td>8 843.22</td><td>sl 2663.58</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.24 03:45:00</td><td>178</td><td>GOLD</td><td>buy</td><td>in</td><td>0.2</td><td>2758.94</td><td>178</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 843.22</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.24 04:00:40</td><td>179</td><td>GOLD</td><td>sell</td><td>out</td><td>0.2</td><td>2764.04</td><td>179</td><td>0.00</td><td>0.00</td><td>102.00</td><td>8 945.22</td><td>tp 2764.04</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.01.24 08:45:00</td><td>180</td><td>GOLD</td><td>buy</td><td>in</td><td>0.1</td><td>2775.69</td><td>180</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 945.22</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.01.27 01:02:40</td><td>181</td><td>GOLD</td><td>sell</td><td>out</td><td>0.1</td><td>2766.85</td><td>181</td><td>0.00</td><td>-25.77</td><td>-88.40</td><td>8 831.05</td><td>sl 2766.85</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.03 12:00:00</td><td>182</td><td>GOLD</td><td>buy</td><td>in</td><td>0.14</td><td>2796.55</td><td>182</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 831.05</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.03 13:12:40</td><td>183</td><td>GOLD</td><td>sell</td><td>out</td><td>0.14</td><td>2803.65</td><td>183</td><td>0.00</td><td>0.00</td><td>99.40</td><td>8 930.45</td><td>tp 2803.65</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.03 13:45:00</td><td>184</td><td>GOLD</td><td>buy</td><td>in</td><td>0.11</td><td>2800.49</td><td>184</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 930.45</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.03 14:48:40</td><td>185</td><td>GOLD</td><td>sell</td><td>out</td><td>0.11</td><td>2809.68</td><td>185</td><td>0.00</td><td>0.00</td><td>101.09</td><td>9 031.54</td><td>tp 2809.68</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.03 17:30:00</td><td>186</td><td>GOLD</td><td>buy</td><td>in</td><td>0.05</td><td>2821.40</td><td>186</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 031.54</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.04 17:00:40</td><td>187</td><td>GOLD</td><td>sell</td><td>out</td><td>0.05</td><td>2841.32</td><td>187</td><td>0.00</td><td>-12.89</td><td>99.60</td><td>9 118.25</td><td>tp 2841.32</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.04 22:30:00</td><td>188</td><td>GOLD</td><td>buy</td><td>in</td><td>0.14</td><td>2842.01</td><td>188</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 118.25</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.05 04:06:40</td><td>189</td><td>GOLD</td><td>sell</td><td>out</td><td>0.14</td><td>2849.41</td><td>189</td><td>0.00</td><td>-36.08</td><td>103.60</td><td>9 185.77</td><td>tp 2849.41</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.05 09:45:00</td><td>190</td><td>GOLD</td><td>buy</td><td>in</td><td>0.12</td><td>2859.16</td><td>190</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 185.77</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.05 10:42:40</td><td>191</td><td>GOLD</td><td>sell</td><td>out</td><td>0.12</td><td>2868.18</td><td>191</td><td>0.00</td><td>0.00</td><td>108.24</td><td>9 294.01</td><td>tp 2868.18</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.05 11:15:00</td><td>192</td><td>GOLD</td><td>buy</td><td>in</td><td>0.08</td><td>2865.85</td><td>192</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 294.01</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.05 17:46:40</td><td>193</td><td>GOLD</td><td>sell</td><td>out</td><td>0.08</td><td>2879.18</td><td>193</td><td>0.00</td><td>0.00</td><td>106.64</td><td>9 400.65</td><td>tp 2879.18</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.06 17:45:00</td><td>194</td><td>GOLD</td><td>sell</td><td>in</td><td>0.04</td><td>2848.76</td><td>194</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 400.65</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.07 05:02:40</td><td>195</td><td>GOLD</td><td>buy</td><td>out</td><td>0.04</td><td>2870.18</td><td>195</td><td>0.00</td><td>0.07</td><td>-85.68</td><td>9 315.04</td><td>sl 2870.18</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.10 07:45:00</td><td>196</td><td>GOLD</td><td>buy</td><td>in</td><td>0.12</td><td>2878.75</td><td>196</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 315.04</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.10 08:46:40</td><td>197</td><td>GOLD</td><td>sell</td><td>out</td><td>0.12</td><td>2887.94</td><td>197</td><td>0.00</td><td>0.00</td><td>110.28</td><td>9 425.32</td><td>tp 2887.94</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.10 12:45:00</td><td>198</td><td>GOLD</td><td>buy</td><td>in</td><td>0.03</td><td>2901.65</td><td>198</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 425.32</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.11 03:52:40</td><td>199</td><td>GOLD</td><td>sell</td><td>out</td><td>0.03</td><td>2932.54</td><td>199</td><td>0.00</td><td>-7.73</td><td>92.67</td><td>9 510.26</td><td>tp 2932.54</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.11 04:00:00</td><td>200</td><td>GOLD</td><td>buy</td><td>in</td><td>0.03</td><td>2934.20</td><td>200</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 510.26</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.11 12:00:40</td><td>201</td><td>GOLD</td><td>sell</td><td>out</td><td>0.03</td><td>2902.79</td><td>201</td><td>0.00</td><td>0.00</td><td>-94.23</td><td>9 416.03</td><td>sl 2902.79</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.12 02:30:00</td><td>202</td><td>GOLD</td><td>buy</td><td>in</td><td>2.14</td><td>2895.70</td><td>202</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 416.03</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.12 02:33:40</td><td>203</td><td>GOLD</td><td>sell</td><td>out</td><td>2.14</td><td>2895.26</td><td>203</td><td>0.00</td><td>0.00</td><td>-94.16</td><td>9 321.87</td><td>sl 2895.26</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.12 20:15:00</td><td>204</td><td>GOLD</td><td>buy</td><td>in</td><td>0.05</td><td>2902.43</td><td>204</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 321.87</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.13 07:23:40</td><td>205</td><td>GOLD</td><td>sell</td><td>out</td><td>0.05</td><td>2921.27</td><td>205</td><td>0.00</td><td>-38.66</td><td>94.20</td><td>9 377.41</td><td>tp 2921.27</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.14 16:45:00</td><td>206</td><td>GOLD</td><td>sell</td><td>in</td><td>0.09</td><td>2923.17</td><td>206</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 377.41</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.14 17:17:40</td><td>207</td><td>GOLD</td><td>buy</td><td>out</td><td>0.09</td><td>2911.19</td><td>207</td><td>0.00</td><td>0.00</td><td>107.82</td><td>9 485.23</td><td>tp 2911.19</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.14 21:15:00</td><td>208</td><td>GOLD</td><td>sell</td><td>in</td><td>0.02</td><td>2884.54</td><td>208</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 485.23</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.18 16:59:20</td><td>209</td><td>GOLD</td><td>buy</td><td>out</td><td>0.02</td><td>2928.38</td><td>209</td><td>0.00</td><td>0.08</td><td>-87.68</td><td>9 397.63</td><td>sl 2928.38</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.20 08:45:00</td><td>210</td><td>GOLD</td><td>buy</td><td>in</td><td>0.15</td><td>2945.29</td><td>210</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 397.63</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.20 09:37:40</td><td>211</td><td>GOLD</td><td>sell</td><td>out</td><td>0.15</td><td>2952.62</td><td>211</td><td>0.00</td><td>0.00</td><td>109.95</td><td>9 507.58</td><td>tp 2952.62</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.21 11:15:00</td><td>212</td><td>GOLD</td><td>sell</td><td>in</td><td>0.11</td><td>2924.52</td><td>212</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 507.58</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.21 13:11:40</td><td>213</td><td>GOLD</td><td>buy</td><td>out</td><td>0.11</td><td>2932.99</td><td>213</td><td>0.00</td><td>0.00</td><td>-93.17</td><td>9 414.41</td><td>sl 2932.99</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.24 12:00:00</td><td>214</td><td>GOLD</td><td>buy</td><td>in</td><td>0.14</td><td>2944.52</td><td>214</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 414.41</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.24 12:43:40</td><td>215</td><td>GOLD</td><td>sell</td><td>out</td><td>0.14</td><td>2938.04</td><td>215</td><td>0.00</td><td>0.00</td><td>-90.72</td><td>9 323.69</td><td>sl 2938.04</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.24 15:00:00</td><td>216</td><td>GOLD</td><td>buy</td><td>in</td><td>0.07</td><td>2946.75</td><td>216</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 323.69</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.24 16:40:20</td><td>217</td><td>GOLD</td><td>sell</td><td>out</td><td>0.07</td><td>2934.76</td><td>217</td><td>0.00</td><td>0.00</td><td>-83.93</td><td>9 239.76</td><td>sl 2934.76</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.25 01:30:00</td><td>218</td><td>GOLD</td><td>buy</td><td>in</td><td>0.04</td><td>2951.43</td><td>218</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 239.76</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.25 09:52:40</td><td>219</td><td>GOLD</td><td>sell</td><td>out</td><td>0.04</td><td>2930.63</td><td>219</td><td>0.00</td><td>0.00</td><td>-83.20</td><td>9 156.56</td><td>sl 2930.63</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.02.27 23:00:00</td><td>220</td><td>GOLD</td><td>sell</td><td>in</td><td>0.06</td><td>2873.76</td><td>220</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 156.56</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.02.28 06:20:40</td><td>221</td><td>GOLD</td><td>buy</td><td>out</td><td>0.06</td><td>2857.13</td><td>221</td><td>0.00</td><td>0.11</td><td>99.78</td><td>9 256.45</td><td>tp 2857.13</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.03.03 06:00:00</td><td>222</td><td>GOLD</td><td>sell</td><td>in</td><td>0.12</td><td>2864.72</td><td>222</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 256.45</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.03.03 12:45:40</td><td>223</td><td>GOLD</td><td>buy</td><td>out</td><td>0.12</td><td>2871.90</td><td>223</td><td>0.00</td><td>0.00</td><td>-86.16</td><td>9 170.29</td><td>sl 2871.90</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.03.17 20:15:00</td><td>224</td><td>GOLD</td><td>buy</td><td>in</td><td>0.15</td><td>2998.64</td><td>224</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 170.29</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.03.18 03:56:40</td><td>225</td><td>GOLD</td><td>sell</td><td>out</td><td>0.15</td><td>3005.61</td><td>225</td><td>0.00</td><td>-38.66</td><td>104.55</td><td>9 236.18</td><td>tp 3005.61</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.03.18 11:30:00</td><td>226</td><td>GOLD</td><td>buy</td><td>in</td><td>0.05</td><td>3023.43</td><td>226</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 236.18</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.03.19 07:56:40</td><td>227</td><td>GOLD</td><td>sell</td><td>out</td><td>0.05</td><td>3044.43</td><td>227</td><td>0.00</td><td>-12.89</td><td>105.00</td><td>9 328.29</td><td>tp 3044.43</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.03.19 09:30:00</td><td>228</td><td>GOLD</td><td>buy</td><td>in</td><td>0.15</td><td>3040.41</td><td>228</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 328.29</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.03.19 10:08:40</td><td>229</td><td>GOLD</td><td>sell</td><td>out</td><td>0.15</td><td>3034.31</td><td>229</td><td>0.00</td><td>0.00</td><td>-91.50</td><td>9 236.79</td><td>sl 3034.31</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.03.19 22:30:00</td><td>230</td><td>GOLD</td><td>buy</td><td>in</td><td>0.05</td><td>3046.17</td><td>230</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 236.79</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.03.20 12:30:40</td><td>231</td><td>GOLD</td><td>sell</td><td>out</td><td>0.05</td><td>3029.22</td><td>231</td><td>0.00</td><td>-38.66</td><td>-84.75</td><td>9 113.38</td><td>sl 3029.22</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.03.24 17:45:00</td><td>232</td><td>GOLD</td><td>sell</td><td>in</td><td>0.06</td><td>3014.42</td><td>232</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 113.38</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.03.25 15:36:40</td><td>233</td><td>GOLD</td><td>buy</td><td>out</td><td>0.06</td><td>3028.14</td><td>233</td><td>0.00</td><td>0.11</td><td>-82.32</td><td>9 031.17</td><td>sl 3028.14</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.03.31 20:15:00</td><td>234</td><td>GOLD</td><td>buy</td><td>in</td><td>0.11</td><td>3119.47</td><td>234</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 031.17</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.01 04:01:40</td><td>235</td><td>GOLD</td><td>sell</td><td>out</td><td>0.11</td><td>3129.12</td><td>235</td><td>0.00</td><td>-28.35</td><td>106.15</td><td>9 108.97</td><td>tp 3129.12</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.02 05:45:00</td><td>236</td><td>GOLD</td><td>buy</td><td>in</td><td>0.03</td><td>3131.70</td><td>236</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 108.97</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.02 23:14:20</td><td>237</td><td>GOLD</td><td>sell</td><td>out</td><td>0.03</td><td>3107.37</td><td>237</td><td>0.00</td><td>0.00</td><td>-72.99</td><td>9 035.98</td><td>sl 3107.37</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.07 10:45:00</td><td>238</td><td>GOLD</td><td>sell</td><td>in</td><td>0.03</td><td>3019.31</td><td>238</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 035.98</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.07 14:36:40</td><td>239</td><td>GOLD</td><td>buy</td><td>out</td><td>0.03</td><td>3044.45</td><td>239</td><td>0.00</td><td>0.00</td><td>-75.42</td><td>8 960.56</td><td>sl 3044.45</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.07 21:15:00</td><td>240</td><td>GOLD</td><td>sell</td><td>in</td><td>0.01</td><td>2970.90</td><td>240</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 960.56</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.09 09:56:40</td><td>241</td><td>GOLD</td><td>buy</td><td>out</td><td>0.01</td><td>3037.97</td><td>241</td><td>0.00</td><td>0.04</td><td>-67.07</td><td>8 893.53</td><td>sl 3037.97</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.09 18:15:00</td><td>242</td><td>GOLD</td><td>buy</td><td>in</td><td>0.02</td><td>3075.18</td><td>242</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 893.53</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.10 05:16:40</td><td>243</td><td>GOLD</td><td>sell</td><td>out</td><td>0.02</td><td>3114.43</td><td>243</td><td>0.00</td><td>-15.46</td><td>78.50</td><td>8 956.57</td><td>tp 3114.43</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.15 08:30:00</td><td>244</td><td>GOLD</td><td>buy</td><td>in</td><td>0.22</td><td>3224.02</td><td>244</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 956.57</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.15 10:26:40</td><td>245</td><td>GOLD</td><td>sell</td><td>out</td><td>0.22</td><td>3220.12</td><td>245</td><td>0.00</td><td>0.00</td><td>-85.80</td><td>8 870.77</td><td>sl 3220.12</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.16 04:45:00</td><td>246</td><td>GOLD</td><td>buy</td><td>in</td><td>0.02</td><td>3266.01</td><td>246</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 870.77</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.16 11:15:40</td><td>247</td><td>GOLD</td><td>sell</td><td>out</td><td>0.02</td><td>3313.64</td><td>247</td><td>0.00</td><td>0.00</td><td>95.26</td><td>8 966.03</td><td>tp 3313.64</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.21 06:15:00</td><td>248</td><td>GOLD</td><td>buy</td><td>in</td><td>0.03</td><td>3381.42</td><td>248</td><td>0.00</td><td>0.00</td><td>0.00</td><td>8 966.03</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.21 16:00:40</td><td>249</td><td>GOLD</td><td>sell</td><td>out</td><td>0.03</td><td>3417.24</td><td>249</td><td>0.00</td><td>0.00</td><td>107.46</td><td>9 073.49</td><td>tp 3417.24</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.21 18:00:00</td><td>250</td><td>GOLD</td><td>buy</td><td>in</td><td>0.05</td><td>3416.89</td><td>250</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 073.49</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.22 02:17:40</td><td>251</td><td>GOLD</td><td>sell</td><td>out</td><td>0.05</td><td>3437.44</td><td>251</td><td>0.00</td><td>-12.89</td><td>102.75</td><td>9 163.35</td><td>tp 3437.44</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.22 02:30:00</td><td>252</td><td>GOLD</td><td>buy</td><td>in</td><td>0.03</td><td>3441.59</td><td>252</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 163.35</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.22 03:03:40</td><td>253</td><td>GOLD</td><td>sell</td><td>out</td><td>0.03</td><td>3417.36</td><td>253</td><td>0.00</td><td>0.00</td><td>-72.69</td><td>9 090.66</td><td>sl 3417.36</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.23 20:30:00</td><td>254</td><td>GOLD</td><td>buy</td><td>in</td><td>0.06</td><td>3282.75</td><td>254</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 090.66</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.24 01:02:40</td><td>255</td><td>GOLD</td><td>sell</td><td>out</td><td>0.06</td><td>3299.15</td><td>255</td><td>0.00</td><td>-46.39</td><td>98.40</td><td>9 142.67</td><td>tp 3299.15</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.25 21:45:00</td><td>256</td><td>GOLD</td><td>buy</td><td>in</td><td>0.08</td><td>3291.58</td><td>256</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 142.67</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.25 22:40:40</td><td>257</td><td>GOLD</td><td>sell</td><td>out</td><td>0.08</td><td>3305.21</td><td>257</td><td>0.00</td><td>0.00</td><td>109.04</td><td>9 251.71</td><td>tp 3305.21</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.28 01:45:00</td><td>258</td><td>GOLD</td><td>buy</td><td>in</td><td>0.04</td><td>3309.60</td><td>258</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 251.71</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.28 04:30:40</td><td>259</td><td>GOLD</td><td>sell</td><td>out</td><td>0.04</td><td>3287.67</td><td>259</td><td>0.00</td><td>0.00</td><td>-87.72</td><td>9 163.99</td><td>sl 3287.67</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.28 13:30:00</td><td>260</td><td>GOLD</td><td>sell</td><td>in</td><td>0.23</td><td>3283.73</td><td>260</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 163.99</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.28 13:36:40</td><td>261</td><td>GOLD</td><td>buy</td><td>out</td><td>0.23</td><td>3287.64</td><td>261</td><td>0.00</td><td>0.00</td><td>-89.93</td><td>9 074.06</td><td>sl 3287.64</td></tr>
+   <tr bgcolor="#F7F7F7" align=right><td>2025.04.29 04:30:00</td><td>262</td><td>GOLD</td><td>sell</td><td>in</td><td>0.07</td><td>3331.09</td><td>262</td><td>0.00</td><td>0.00</td><td>0.00</td><td>9 074.06</td><td>Mochipoyo</td></tr>
+   <tr bgcolor="#FFFFFF" align=right><td>2025.04.29 06:05:40</td><td>263</td><td>GOLD</td><td>buy</td><td>out</td><td>0.07</td><td>3317.11</td><td>263</td><td>0.00</td><td>0.00</td><td>97.86</td><td>9 171.92</td><td>tp 3317.11</td></tr>
+   <tr align="right">
+      <td nowrap colspan="8" style="height: 30px"></td>
+      <td nowrap><b>0.00</b></td>
+      <td nowrap><b>-1 265.86</b></td>
+      <td nowrap><b>437.78</b></td>
+      <td nowrap><b>9 171.92</b></td>
+      <td nowrap></td>
+   </tr>
+   <tr>
+      <td nowrap style="height: 10px"></td>
+   </tr>
+</table>
+</div>
+</body>
+</html>
