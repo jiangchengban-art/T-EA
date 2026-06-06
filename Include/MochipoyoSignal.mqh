@@ -263,9 +263,20 @@ int EvaluateEntry(const string symbol, bool isLong, int &score, string &reasons[
    score = 0;
    ArrayResize(reasons, 0);
 
-   // H4逆行ペナルティ: 上位足に逆らうトレードのスコアを下げる
+   // H4トレンド判定
    bool h4Aligned = isLong ? IsHigherHighHigherLow(symbol, PERIOD_H4, 80)
                            : IsLowerHighLowerLow  (symbol, PERIOD_H4, 80);
+
+   // ロング完全禁止: H4が下降トレンドの場合はスコアに関わらずエントリー禁止
+   if(isLong && !h4Aligned)
+     {
+      ArrayResize(reasons, 1);
+      reasons[0] = "[BLOCKED] H4下降トレンド中のロング禁止";
+      score = 0;
+      return 0;
+     }
+
+   // H4逆行ペナルティ: ショートが上昇H4に逆らう場合のみ適用
    if(!h4Aligned) score -= 2;
 
    // 1. 上位足トレンド(2点)

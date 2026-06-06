@@ -16,7 +16,7 @@
 input double InpRiskPercent     = 1.0;      // 1トレードリスク%
 input double InpMinRR           = 1.0;      // 最小RR比
 input double InpTargetRR        = 1.2;      // ターゲットRR比
-input int    InpMinScore        = 8;        // 最小合計スコア(12点満点)
+input int    InpMinScore        = 9;        // 最小合計スコア(12点満点)
 input int    InpMagicNumber     = 20260411;
 input int    InpMaxSpreadPoints = 50;       // 最大許容スプレッド(ポイント)
 input int    InpSlippagePoints  = 20;
