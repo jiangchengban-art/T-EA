@@ -264,8 +264,8 @@ int EvaluateEntry(const string symbol, bool isLong, int &score, string &reasons[
    ArrayResize(reasons, 0);
 
    // H4トレンド判定
-   bool h4Aligned = isLong ? IsHigherHighHigherLow(symbol, PERIOD_H4, 80)
-                           : IsLowerHighLowerLow  (symbol, PERIOD_H4, 80);
+   bool h4Aligned = isLong ? IsHigherHighHigherLow(symbol, PERIOD_H4, 50)
+                           : IsLowerHighLowerLow  (symbol, PERIOD_H4, 50);
 
    // ロング完全禁止: H4が下降トレンドの場合はスコアに関わらずエントリー禁止
    if(isLong && !h4Aligned)
@@ -280,8 +280,8 @@ int EvaluateEntry(const string symbol, bool isLong, int &score, string &reasons[
    if(!h4Aligned) score -= 2;
 
    // 1. 上位足トレンド(2点)
-   bool htfOK = isLong ? IsHigherHighHigherLow(symbol, PERIOD_H4, 80)
-                       : IsLowerHighLowerLow  (symbol, PERIOD_H4, 80);
+   bool htfOK = isLong ? IsHigherHighHigherLow(symbol, PERIOD_H4, 50)
+                       : IsLowerHighLowerLow  (symbol, PERIOD_H4, 50);
    if(htfOK) { score += 2; ArrayResize(reasons, ArraySize(reasons)+1); reasons[ArraySize(reasons)-1] = "[OK+2] 1.H4トレンド"; }
    else       { ArrayResize(reasons, ArraySize(reasons)+1); reasons[ArraySize(reasons)-1] = "[--] 1.H4トレンド"; }
 

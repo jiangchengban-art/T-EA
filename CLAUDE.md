@@ -43,7 +43,7 @@ mochipoyo-ea/
 - リスクは1トレード1%以下を厳守
 - ロジック変更時は必ず `../mochipoyo-spec.md` を先に更新する
 
-## スコアリング（12点満点、閾値: InpMinScore=8）
+## スコアリング（12点満点、閾値: InpMinScore=9※v1.1以降）
 | # | 判定項目 | 点数 | タイムフレーム |
 |---|---|---|---|
 | 1 | H4ダウ理論トレンド | +2 | H4 |
@@ -62,7 +62,7 @@ GBPJPY / GBPUSD / XAUUSD（デイトレ: H4上位 / M15中位 / M5下位）
 | パラメーター | 既定値 | 意味 |
 |---|---|---|
 | InpRiskPercent | 1.0 | 1トレードリスク% |
-| InpMinScore | 8 | エントリー閾値（12点満点） |
+| InpMinScore | 9 | エントリー閾値（12点満点、v1.1以降） |
 | InpTargetRR | 1.2 | 利確目標RR |
 | InpMinRR | 1.0 | 最小許容RR |
 | InpTrailByEMA40 | false | EMA40追従トレーリング |
