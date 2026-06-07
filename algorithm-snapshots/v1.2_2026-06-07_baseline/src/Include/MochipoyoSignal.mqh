@@ -160,71 +160,6 @@ bool IsLowerHighLowerLow(const string symbol, ENUM_TIMEFRAMES tf, int lookback)
 }
 
 //+------------------------------------------------------------------+
-//| H4ハイブリッドトレンド判定（v1.3: 窓化スイング AND EMA）          |
-//| 窓化スイング: lookback を前半/後半に分割して極値を比較             |
-//| EMA条件: EMA20とEMA40の並び＋EMA40の傾きで方向を確認              |
-//+------------------------------------------------------------------+
-bool IsH4TrendUp(const string symbol)
-{
-   int half = 25; // lookback 50 の半分
-   // 前半窓(直近): shift 3..half の最高値・最安値
-   double recentHH = -DBL_MAX, recentLL = DBL_MAX;
-   for(int i = 3; i < half; i++)
-   {
-      double hi = iHigh(symbol, PERIOD_H4, i);
-      double lo = iLow (symbol, PERIOD_H4, i);
-      if(hi > recentHH) recentHH = hi;
-      if(lo < recentLL) recentLL = lo;
-   }
-   // 後半窓(過去): shift half..50 の最高値・最安値
-   double olderHH = -DBL_MAX, olderLL = DBL_MAX;
-   for(int i = half; i < 50; i++)
-   {
-      double hi = iHigh(symbol, PERIOD_H4, i);
-      double lo = iLow (symbol, PERIOD_H4, i);
-      if(hi > olderHH) olderHH = hi;
-      if(lo < olderLL) olderLL = lo;
-   }
-   // 窓化スイング: 直近窓が過去窓より切り上げ
-   bool swingUp = (recentHH > olderHH) && (recentLL > olderLL);
-   // EMA条件: EMA20>EMA40 かつ EMA40が上向き
-   double e20 = GetEMA(symbol, PERIOD_H4, 20, 0);
-   double e40_0 = GetEMA(symbol, PERIOD_H4, 40, 0);
-   double e40_3 = GetEMA(symbol, PERIOD_H4, 40, 3);
-   if(e20 == 0.0 || e40_0 == 0.0 || e40_3 == 0.0) return false;
-   bool emaUp = (e20 > e40_0) && (e40_0 > e40_3);
-   return swingUp && emaUp;
-}
-
-bool IsH4TrendDown(const string symbol)
-{
-   int half = 25;
-   double recentHH = -DBL_MAX, recentLL = DBL_MAX;
-   for(int i = 3; i < half; i++)
-   {
-      double hi = iHigh(symbol, PERIOD_H4, i);
-      double lo = iLow (symbol, PERIOD_H4, i);
-      if(hi > recentHH) recentHH = hi;
-      if(lo < recentLL) recentLL = lo;
-   }
-   double olderHH = -DBL_MAX, olderLL = DBL_MAX;
-   for(int i = half; i < 50; i++)
-   {
-      double hi = iHigh(symbol, PERIOD_H4, i);
-      double lo = iLow (symbol, PERIOD_H4, i);
-      if(hi > olderHH) olderHH = hi;
-      if(lo < olderLL) olderLL = lo;
-   }
-   bool swingDown = (recentHH < olderHH) && (recentLL < olderLL);
-   double e20 = GetEMA(symbol, PERIOD_H4, 20, 0);
-   double e40_0 = GetEMA(symbol, PERIOD_H4, 40, 0);
-   double e40_3 = GetEMA(symbol, PERIOD_H4, 40, 3);
-   if(e20 == 0.0 || e40_0 == 0.0 || e40_3 == 0.0) return false;
-   bool emaDown = (e20 < e40_0) && (e40_0 < e40_3);
-   return swingDown && emaDown;
-}
-
-//+------------------------------------------------------------------+
 //| ヒドゥンダイバージェンス                                          |
 //| Bullish: 価格の安値=切り上げ, MACDの安値=切り下げ                  |
 //| Bearish: 価格の高値=切り下げ, MACDの高値=切り上げ                  |
@@ -328,14 +263,15 @@ int EvaluateEntry(const string symbol, bool isLong, int &score, string &reasons[
    score = 0;
    ArrayResize(reasons, 0);
 
-   // H4トレンド判定（v1.3: ハイブリッド方式）
-   bool h4Aligned = isLong ? IsH4TrendUp(symbol) : IsH4TrendDown(symbol);
+   // H4トレンド判定
+   bool h4Aligned = isLong ? IsHigherHighHigherLow(symbol, PERIOD_H4, 50)
+                           : IsLowerHighLowerLow  (symbol, PERIOD_H4, 50);
 
-   // ロング完全禁止: H4が上昇トレンドでない場合はスコアに関わらずエントリー禁止
+   // ロング完全禁止: H4が下降トレンドの場合はスコアに関わらずエントリー禁止
    if(isLong && !h4Aligned)
      {
       ArrayResize(reasons, 1);
-      reasons[0] = "[BLOCKED] H4上昇トレンド未確認のためロング禁止";
+      reasons[0] = "[BLOCKED] H4下降トレンド中のロング禁止";
       score = 0;
       return 0;
      }
@@ -343,9 +279,11 @@ int EvaluateEntry(const string symbol, bool isLong, int &score, string &reasons[
    // H4逆行ペナルティ: ショートが上昇H4に逆らう場合のみ適用
    if(!h4Aligned) score -= 2;
 
-   // 1. 上位足トレンド(2点) ── h4Aligned を再利用（二重計算なし）
-   if(h4Aligned) { score += 2; ArrayResize(reasons, ArraySize(reasons)+1); reasons[ArraySize(reasons)-1] = "[OK+2] 1.H4トレンド(v1.3)"; }
-   else           { ArrayResize(reasons, ArraySize(reasons)+1); reasons[ArraySize(reasons)-1] = "[--] 1.H4トレンド(v1.3)"; }
+   // 1. 上位足トレンド(2点)
+   bool htfOK = isLong ? IsHigherHighHigherLow(symbol, PERIOD_H4, 50)
+                       : IsLowerHighLowerLow  (symbol, PERIOD_H4, 50);
+   if(htfOK) { score += 2; ArrayResize(reasons, ArraySize(reasons)+1); reasons[ArraySize(reasons)-1] = "[OK+2] 1.H4トレンド"; }
+   else       { ArrayResize(reasons, ArraySize(reasons)+1); reasons[ArraySize(reasons)-1] = "[--] 1.H4トレンド"; }
 
    // 2. 下位足トレンド一致(2点)
    bool ltfOK = isLong ? (IsHigherHighHigherLow(symbol, PERIOD_M15, 60) && IsHigherHighHigherLow(symbol, PERIOD_M5, 60))
