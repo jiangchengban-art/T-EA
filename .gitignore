@@ -1,0 +1,34 @@
+# Compiled EA files
+*.ex5
+*.ex4
+*.ex
+
+# Compilation logs
+compile.log
+
+# Build artifacts
+*.o
+*.a
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# IDE
+.vs/
+.vscode/
+*.code-workspace
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# MT5 tester temporary
+backtests/*/ReportTester-*.html
+backtests/*/ReportTester-*.png
